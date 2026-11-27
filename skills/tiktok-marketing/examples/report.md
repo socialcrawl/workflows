@@ -18,10 +18,10 @@ Each video is measured against its creator's own videos published before it; 6 o
 |---|---|---|---|---|---|---|---|---|
 | 1 | @jameseer33 | 14/11/2026 | 498x | 1,130,139 | median of 2,270 views over 11 earlier videos, 19/10 to 24/10/2026 | 3 min or more | How Modders Used AI to Turn Any App Into Source Code | https://www.tiktok.com/@jameseer33/video/7708004958687284510 |
 | 2 | @dev.daily.drops | 15/11/2026 | 377x | 825,542 | median of 2,192 views over 18 earlier videos, 23/10 to 14/11/2026 | 30 to 60 s | Keep using Claude Code for free, even past your limit One GitHub project, 34 free AI providers, 635 | https://www.tiktok.com/@dev.daily.drops/video/7708429256283540769 |
-| 3 | a creator with 2,236 followers | 10/11/2026 | 127x | 224,150 | median of 1,769.5 views over 16 earlier videos, 27/04 to 18/10/2026 | 30 to 60 s | Claude Code god mode: Opus plans, Haiku does the work at a fortieth of the price. | in data/posts.csv |
-| 4 | a creator with 1,385 followers | 22/11/2026 | 110x | 90,462 | median of 823.5 views over 20 earlier videos, 01/11 to 21/11/2026 | 1 to 3 min | A software factory is agentic coding at level 5. | in data/posts.csv |
-| 5 | a creator with 1,740 followers | 15/11/2026 | 106x | 185,657 | median of 1,754.5 views over 10 earlier videos, 01/11 to 14/11/2026 | 30 to 60 s | Claude Code is wasting your tokens 🔥 4 free plugins that fix it. | in data/posts.csv |
-| 6 | @jameseer33 | 14/11/2026 | 20x | 47,781 | median of 2,409.5 views over 12 earlier videos, 19/10 to 14/11/2026 | 3 min or more | How Modders Used AI to Turn Any App Into Source Code | https://www.tiktok.com/@jameseer33/video/7708005892607724831 |
+| 3 | a creator with 2,236 followers | 10/11/2026 | 127x | 224,150 | median of 1,770 views over 16 earlier videos, 27/04 to 18/10/2026 | 30 to 60 s | Claude Code god mode: Opus plans, Haiku does the work at a fortieth of the price. | in data/posts.csv |
+| 4 | a creator with 1,385 followers | 22/11/2026 | 110x | 90,462 | median of 824 views over 20 earlier videos, 01/11 to 21/11/2026 | 1 to 3 min | A software factory is agentic coding at level 5. | in data/posts.csv |
+| 5 | a creator with 1,740 followers | 15/11/2026 | 106x | 185,657 | median of 1,755 views over 10 earlier videos, 01/11 to 14/11/2026 | 30 to 60 s | Claude Code is wasting your tokens 🔥 4 free plugins that fix it. | in data/posts.csv |
+| 6 | @jameseer33 | 14/11/2026 | 20x | 47,781 | median of 2,410 views over 12 earlier videos, 19/10 to 14/11/2026 | 3 min or more | How Modders Used AI to Turn Any App Into Source Code | https://www.tiktok.com/@jameseer33/video/7708005892607724831 |
 
 ## What the break-outs did
 
@@ -91,7 +91,6 @@ No break-out here rests on a large audience, a comment gate, a trending sound or
 |---|---|---|
 | Read deeper: more searches, more creators, more comments | `npx -y socialcrawl@latest tiktok-marketing "AI coding tools" --deep` | free quote first: about 124 credits, at most 176 |
 | Track the top break-out (@jameseer33) | `npx -y socialcrawl@latest post-tracker https://www.tiktok.com/@jameseer33/video/7708004958687284510` | its views in 14 days against 1,130,139 today |
-| Take it apart shot by shot | `npx -y socialcrawl@latest video-teardown https://www.tiktok.com/@jameseer33/video/7708004958687284510` | its structure, words and comments |
 | Post your own video with the length `30 to 60 s` | - | in 14 days, whether it reached 3 times your own median views |
 
 ## How this was read

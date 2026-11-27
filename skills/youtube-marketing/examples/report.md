@@ -18,11 +18,11 @@ Each video is measured against its channel's own videos published before it; 8 o
 |---|---|---|---|---|---|---|---|---|
 | 1 | @griffinwdesigns | 07/11/2026 | 394x | 472,754 | median of 1,199 views over 9 earlier videos, 26/10 to 06/11/2026 | under 5 min | UI Libraries for Claude Code (Ban the AI Look) | https://www.youtube.com/watch?v=zsCGS-Yzjnw |
 | 2 | @aidotengineer | 12/11/2026 | 146x | 1,117,299 | median of 7,668 views over 20 earlier videos, 09/11 to 12/11/2026 | 10 to 20 min | Rethinking Claude Code Best Practices - Lydia Hallie, Anthropic | https://www.youtube.com/watch?v=vlfCjWuv4es |
-| 3 | a channel with 6,230 subscribers | 19/11/2026 | 51x | 156,844 | median of 3,076.5 views over 20 earlier videos, 26/01 to 09/11/2026 | 10 to 20 min | Floorplan: Finally Understand the Code Your AI Wrote | in data/posts.csv |
+| 3 | a channel with 6,230 subscribers | 19/11/2026 | 51x | 156,844 | median of 3,077 views over 20 earlier videos, 26/01 to 09/11/2026 | 10 to 20 min | Floorplan: Finally Understand the Code Your AI Wrote | in data/posts.csv |
 | 4 | @aidotengineer | 09/11/2026 | 29x | 187,150 | median of 6,479 views over 9 earlier videos, 08/11 to 09/11/2026 | 20 min or more | How to Build a Software Factory That Improves Itself - Zach Lloyd, Warp | https://www.youtube.com/watch?v=nKjPBAw_N_0 |
-| 5 | @ibmtechnology | 23/11/2026 | 19x | 496,452 | median of 26,777.5 views over 20 earlier videos, 30/10 to 22/11/2026 | 5 to 10 min | Vibe Coding vs. Agentic Coding: Which Should You Use? | https://www.youtube.com/watch?v=h4tHDFCPmQE |
+| 5 | @ibmtechnology | 23/11/2026 | 19x | 496,452 | median of 26,778 views over 20 earlier videos, 30/10 to 22/11/2026 | 5 to 10 min | Vibe Coding vs. Agentic Coding: Which Should You Use? | https://www.youtube.com/watch?v=h4tHDFCPmQE |
 | 6 | @wearenocode | 24/11/2026 | 11x | 381,853 | median of 35,663 views over 20 earlier videos, 07/10 to 21/11/2026 | 5 to 10 min | Claude Ship JUST Dropped - Is this the END for Programmers? | https://www.youtube.com/watch?v=ahd8i70p5Hw |
-| 7 | @outskillai | 17/11/2026 | 9.1x | 182,059 | median of 19,989.5 views over 12 earlier videos, 15/10 to 13/11/2026 | 20 min or more | 4 FREE Open Source AI Tools That Replace Your Paid AI Stack (No Coding) | https://www.youtube.com/watch?v=pAov09lgq3Y |
+| 7 | @outskillai | 17/11/2026 | 9.1x | 182,059 | median of 19,990 views over 12 earlier videos, 15/10 to 13/11/2026 | 20 min or more | 4 FREE Open Source AI Tools That Replace Your Paid AI Stack (No Coding) | https://www.youtube.com/watch?v=pAov09lgq3Y |
 | 8 | @ibmtechnology | 09/11/2026 | 3.3x | 91,806 | median of 27,716 views over 14 earlier videos, 23/10 to 08/11/2026 | 5 to 10 min | Spec-Driven Development vs. Waterfall: What's Different for AI Coding? | https://www.youtube.com/watch?v=GpZ5T51jE4U |
 
 ## What the break-outs did
@@ -92,7 +92,6 @@ Comments read on the top videos, labelled by the API [F11].
 |---|---|---|
 | Read deeper: more searches, more channels, more comments | `npx -y socialcrawl@latest youtube-marketing "AI coding tools" --deep` | free quote first: about 113 credits, at most 141 |
 | Track the top break-out (@griffinwdesigns) | `npx -y socialcrawl@latest post-tracker https://www.youtube.com/watch?v=zsCGS-Yzjnw` | its views in 14 days against 472,754 today |
-| Take it apart shot by shot | `npx -y socialcrawl@latest video-teardown https://www.youtube.com/watch?v=zsCGS-Yzjnw` | its structure, words and comments |
 | Post your own video with the length `5 to 10 min` | - | in 14 days, whether it reached 3 times your own median views |
 
 ## How this was read

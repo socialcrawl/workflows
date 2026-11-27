@@ -17,10 +17,10 @@ Each reel is measured against its creator's own reels published before it; 5 of 
 | # | Account | Published | × its usual views | Views | Baseline | Length | Hook | Link |
 |---|---|---|---|---|---|---|---|---|
 | 1 | @ai.nxtlvl | 04/11/2026 | 53x | 424,044 | median of 7,927 views over 9 earlier reels, 26/10 to 03/11/2026 | 30 to 60 s | Comment "𝗥𝗘𝗣𝗢" 👈 and I'll DM you all 9 links 🔗 | https://www.instagram.com/reel/DfU2nIgt8XK/ |
-| 2 | @benkimball.ai | 25/11/2026 | 40x | 148,573 | median of 3,713.5 views over 18 earlier reels, 18/11 to 24/11/2026, still rising | 1 to 3 min | 7 FREE Claude Code Skills You NEED to Install! | https://www.instagram.com/reel/DgJncKIBPpN/ |
+| 2 | @benkimball.ai | 25/11/2026 | 40x | 148,573 | median of 3,714 views over 18 earlier reels, 18/11 to 24/11/2026, still rising | 1 to 3 min | 7 FREE Claude Code Skills You NEED to Install! | https://www.instagram.com/reel/DgJncKIBPpN/ |
 | 3 | a creator with 6,951 followers | 12/11/2026 | 32x | 76,164 | median of 2,401 views over 17 earlier reels, 02/11 to 12/11/2026 | 1 to 3 min | Claude can now help you recreate existing apps using 11 specialized AI skills. | in data/posts.csv |
-| 4 | @aantoinelee | 21/11/2026 | 30x | 337,673 | median of 11,106.5 views over 18 earlier reels, 20/09 to 15/11/2026 | 1 to 3 min | 7 tools I use with Claude Code to 10x agentic output | https://www.instagram.com/reel/DgBT5zFBLag/ |
-| 5 | @lukegarvai | 29/10/2026 | 18x | 48,693 | median of 2,677.5 views over 10 earlier reels, 24/10 to 29/10/2026 | 30 to 60 s | Comment AGENTIC and I’ll send you the repo 👇 This GitHub repo just hit number one trending | https://www.instagram.com/reel/DfDxAq4oIYM/ |
+| 4 | @aantoinelee | 21/11/2026 | 30x | 337,673 | median of 11,107 views over 18 earlier reels, 20/09 to 15/11/2026 | 1 to 3 min | 7 tools I use with Claude Code to 10x agentic output | https://www.instagram.com/reel/DgBT5zFBLag/ |
+| 5 | @lukegarvai | 29/10/2026 | 18x | 48,693 | median of 2,678 views over 10 earlier reels, 24/10 to 29/10/2026 | 30 to 60 s | Comment AGENTIC and I’ll send you the repo 👇 This GitHub repo just hit number one trending | https://www.instagram.com/reel/DfDxAq4oIYM/ |
 
 - a creator with 6,951 followers: unusual engagement (inferred) [F4].
 
@@ -99,7 +99,6 @@ Comments read on the top reels, labelled by the API [F8].
 |---|---|---|
 | Read deeper: more searches, more creators, more comments | `npx -y socialcrawl@latest instagram-marketing "AI coding tools" --deep` | free quote first: about 183 credits, at most 240 |
 | Track the top break-out (@ai.nxtlvl) | `npx -y socialcrawl@latest post-tracker https://www.instagram.com/reel/DfU2nIgt8XK/` | its views in 14 days against 424,044 today |
-| Take it apart shot by shot | `npx -y socialcrawl@latest video-teardown https://www.instagram.com/reel/DfU2nIgt8XK/` | its structure, words and comments |
 | Post your own reel with the length `1 to 3 min` | - | in 14 days, whether it reached 3 times your own median views |
 
 ## How this was read

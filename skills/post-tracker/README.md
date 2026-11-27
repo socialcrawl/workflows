@@ -28,7 +28,7 @@ Run the same command again from the same folder to add a reading. For several re
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: the video had 498,383 views, 19 times IBM Technology's usual views (a median of 26,777.5 over its 20 videos before it, 30/10 to 22/11/2026). It gained 534 views in the 10 minutes the readings span, so the hourly figure is only a rough rate. The history file kept the baseline and the channel's size, so the later runs cost 1 credit each.
+The full report is in [examples/report.md](examples/report.md). In short: the video had 498,383 views, 19 times IBM Technology's usual views (a median of 26,778 over its 20 videos before it, 30/10 to 22/11/2026). It gained 534 views in the 10 minutes the readings span, so the hourly figure is only a rough rate. The history file kept the baseline and the channel's size, so the later runs cost 1 credit each.
 
 ## What it costs
 

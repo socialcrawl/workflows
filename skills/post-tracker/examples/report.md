@@ -18,7 +18,7 @@ YouTube · 5 readings from 27/11/2026 to 27/11/2026 · https://www.youtube.com/w
 
 ## Against its author's usual reach
 
-Now at 19x its author's usual views, a median of 26,777.5 views over 20 earlier posts from 30/10/2026 to 22/11/2026; 3 times or more is a break-out [F2].
+Now at 19x its author's usual views, a median of 26,778 views over 20 earlier posts from 30/10/2026 to 22/11/2026; 3 times or more is a break-out [F2].
 
 ## Over time
 
@@ -38,7 +38,6 @@ It gained 534 views in 10 minutes across 5 readings, about 3,181 an hour [F3].
 |---|---|---|
 | Read it again later: each run adds a reading | `npx -y socialcrawl@latest post-tracker https://www.youtube.com/watch?v=h4tHDFCPmQE` | the gain an hour since this reading |
 | Six readings an hour apart, in one run | `npx -y socialcrawl@latest post-tracker https://www.youtube.com/watch?v=h4tHDFCPmQE --every 60 --times 6` | whether the gain an hour holds or fades |
-| Take it apart shot by shot | `npx -y socialcrawl@latest video-teardown https://www.youtube.com/watch?v=h4tHDFCPmQE` | its structure, words and comments |
 
 ## How this was read
 

@@ -21,7 +21,7 @@ npx -y socialcrawl@latest init
 npx -y socialcrawl@latest competitor-research "Notion, Obsidian, Logseq" --about "note-taking apps"
 ```
 
-Always give the category with `--about`: each brand is searched with a filter that keeps only posts about that brand in that category, so "Neon" the database is not counted for neon signs. It reads the last 30 days unless you pass `--since` and `--until`.
+Always give the category with `--about`: each brand is searched with a filter that keeps only posts about that brand in that category, so "Neon" the database is not counted for neon signs. Without it, each brand is judged as a product compared with the others you named, which drops most other meanings but not all; the report says which filter ran. It reads the last 30 days unless you pass `--since` and `--until`.
 
 ## Example
 
@@ -29,7 +29,7 @@ Always give the category with `--about`: each brand is searched with a filter th
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short, over 29/10 to 27/11/2026: Supabase had the most posts read on 3 of the 4 platforms. Neon had the fewest X posts but 80% of the X reach, and the table shows why that share is fragile: one post holds 49% of it. Each brand's most-reached post was measured against its author's earlier posts; the largest break-out was a Reddit thread about Supabase at 104 times its community's usual score. Neon's audience left the most complaints, 4 in 32 comments read.
+The full report is in [examples/report.md](examples/report.md). In short, over 29/10 to 27/11/2026: Supabase had the most posts read on 3 of the 4 platforms. Neon had the fewest X posts but 80% of the X reach, and the table shows why that share is fragile: one post holds 49% of it. The report asks you to check Neon's X and Reddit posts before quoting either share, since a name that is also a common word can pass the filter. Each brand's most-reached post was measured against its author's earlier posts; the largest break-out was a Reddit thread about Supabase at 104 times its community's usual score. Neon's audience left the most complaints, 4 in 32 comments read.
 
 The example names only accounts with 10,000 followers or more and never a Reddit member; your own run keeps every link in `data/posts.csv`.
 
@@ -51,7 +51,7 @@ Share of voice here is not a count of everything said. For each brand on each pl
 ## What it cannot read
 
 - Everything said: only the top page of each platform's search is read, so a share is of the posts read.
-- The filter's mistakes: it can keep an off-topic post or drop a real one; read `data/posts.csv` before you quote a share.
+- The filter's mistakes: it can keep an off-topic post or drop a real one; read `data/posts.csv` before you quote a share. When one brand holds 60% or more of a platform's reach from under half as large a share of its posts, the report says so.
 - Ads in a default run, and ads under any other advertiser name: the TikTok ad library's name search returns other advertisers, which the run leaves out and counts.
 - Meta and LinkedIn ads: their name searches matched other companies when tested, so they are not read.
 - Instagram in a default run: its search takes about 26 seconds a page.
