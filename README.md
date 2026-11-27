@@ -46,6 +46,7 @@ In Claude Code you can also add this repository as a plugin marketplace: `/plugi
 | Workflow | Give it | Get back |
 | --- | --- | --- |
 | [`socialcrawl`](skills/socialcrawl/) | a question in plain words | the right workflow, run for you |
+| [`social-viral`](skills/social-viral/) | a topic | the posts that broke out this week on X, TikTok, Instagram, YouTube, Reddit and LinkedIn, each against its author's earlier posts |
 
 ## Use it
 
