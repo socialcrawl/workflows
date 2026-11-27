@@ -6,6 +6,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const MAX_DESCRIPTION = 1024;
+// Skill names other SocialCrawl repositories install into the same folders.
+const RESERVED = new Set(["socialcrawl"]);
 
 /** The YAML frontmatter's top-level keys and metadata.version, read without a YAML library. */
 function frontmatter(text) {
@@ -54,6 +56,8 @@ export function checkRepo(dir) {
       continue;
     }
     if (fm.name !== name) problems.push(`${name}: name "${fm.name}" does not match its folder "${name}"`);
+    // `socialcrawl init` replaces a skill folder of the same name, so this name would delete it.
+    if (RESERVED.has(name)) problems.push(`${name}: the name is taken by the API skill in socialcrawl/skills`);
     if (!fm.description) problems.push(`${name}: no description`);
     else if (fm.description.length > MAX_DESCRIPTION) problems.push(`${name}: description is ${fm.description.length} characters, over ${MAX_DESCRIPTION}`);
     if (!fm.version) problems.push(`${name}: no metadata.version`);

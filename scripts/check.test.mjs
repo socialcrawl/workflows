@@ -50,6 +50,11 @@ describe("checkRepo", () => {
     assert.match(checkRepo(dir).join("\n"), /README.md: em dash/);
   });
 
+  it("rejects the name socialcrawl, which belongs to the API skill in socialcrawl/skills", () => {
+    const dir = repo({ "README.md": readme("socialcrawl"), "skills/socialcrawl/SKILL.md": skill("socialcrawl"), "skills/socialcrawl/README.md": "x" });
+    assert.match(checkRepo(dir).join("\n"), /socialcrawl: the name is taken by the API skill in socialcrawl\/skills/);
+  });
+
   it("rejects a description over 1,024 characters", () => {
     const long = "x".repeat(1100);
     const dir = repo({ "README.md": readme("a-b"), "skills/a-b/SKILL.md": `---\nname: a-b\ndescription: ${long}\nmetadata:\n  version: "0.1.0"\n---\n`, "skills/a-b/README.md": "x" });

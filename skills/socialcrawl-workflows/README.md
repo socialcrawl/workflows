@@ -1,4 +1,4 @@
-# socialcrawl
+# socialcrawl-workflows
 
 The router skill. Ask your agent a social media question in plain words ("what went viral in AI coding tools this week?") and it picks the right workflow, sets up your SocialCrawl key the first time, runs it, and answers from the report.
 

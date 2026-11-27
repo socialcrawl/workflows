@@ -1,6 +1,6 @@
 ---
-name: socialcrawl
-description: Research social media with SocialCrawl. Use when someone asks what went viral, what people say about a topic or brand on Reddit, X, TikTok, YouTube, Instagram or LinkedIn, how an account grew, or what competitors post. Picks the right SocialCrawl workflow, sets up the key the first time, runs it and reads back the report.
+name: socialcrawl-workflows
+description: Research social media with SocialCrawl. Use when someone asks what went viral, what people say about a topic or brand on Reddit, X, TikTok, YouTube, Instagram or LinkedIn, how an account grew, or what competitors post. Picks the right SocialCrawl workflow, sets up the key the first time, runs it and reads back the report. For one API call or raw rows from an endpoint, the socialcrawl API skill fits better.
 license: MIT
 metadata:
   author: socialcrawl
@@ -13,7 +13,7 @@ inputs:
     required: true
 ---
 
-# SocialCrawl
+# SocialCrawl workflows
 
 Pick the workflow that fits the person's request, run it with the SocialCrawl CLI, and answer from the report it writes.
 

@@ -20,7 +20,7 @@ Then ask your agent "what went viral about AI coding tools this week?". A new ac
 
 | Workflow | Give it | Get back | Default run, measured |
 | --- | --- | --- | --- |
-| [`socialcrawl`](skills/socialcrawl/) | a question in plain words | the right workflow below, run for you | the workflow it picks |
+| [`socialcrawl-workflows`](skills/socialcrawl-workflows/) | a question in plain words | the right workflow below, run for you | the workflow it picks |
 | [`social-viral`](skills/social-viral/) | a topic | the posts that broke out this week on X, TikTok, Instagram, YouTube, Reddit and LinkedIn, each against its author's earlier posts | 61 credits |
 | [`social-pulse`](skills/social-pulse/) | a brand or topic | what changed this week against the week before: on-topic posts, sentiment, questions, complaints, and the posts breaking out | 43 credits |
 | [`social-presence`](skills/social-presence/) | a brand's or public figure's name, and its website | its accounts on six platforms, each confirmed by a link or marked as not confirmed, with how active each is | 23 credits |
@@ -93,7 +93,7 @@ In Claude Code you can also add this repository as a plugin marketplace:
 
 ## How a run works
 
-Ask in plain words (`/socialcrawl what went viral in AI coding tools this week?`), or run one in a terminal:
+Ask in plain words (`/socialcrawl-workflows what went viral in AI coding tools this week?`), or run one in a terminal:
 
 ```bash
 npx -y socialcrawl@latest social-viral "AI coding tools"
