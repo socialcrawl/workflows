@@ -28,11 +28,13 @@ Run `npx -y socialcrawl@latest whoami`. If it says no key is set, ask the person
 | What broke out this week on a topic, across platforms | `social-viral` |
 | What changed this week about a brand or topic: posts, sentiment, questions | `social-pulse` |
 | Where a brand or public figure is on social media, with the evidence for each account | `social-presence` |
+| What Reddit says about a keyword, which communities discuss it, and where to reply | `reddit-marketing` |
+| How one account grows, or a brand's accounts together: what carried it, its launches, who amplified them | `social-teardown` |
 | What works on TikTok for a keyword: the videos breaking out, their hooks and sounds, the comments | `tiktok-marketing` |
 | What works in Instagram reels for a keyword: the reels breaking out, their hooks, the comments | `instagram-marketing` |
 | What works on YouTube for a keyword: the videos and Shorts breaking out, their titles, the comments | `youtube-marketing` |
-| What works on X for a keyword: the posts breaking out, who carried them, what the replies ask | `x-marketing` |
 | What works on LinkedIn for a keyword: the posts breaking out, who posts most, what the comments ask | `linkedin-marketing` |
+| What works on X for a keyword: the posts breaking out, who carried them, what the replies ask | `x-marketing` |
 | Two to five brands compared: share of voice, each brand's best post, what each audience asks and complains about | `competitor-research` |
 | How one post is doing over time, against its author's usual reach | `post-tracker` |
 
@@ -45,6 +47,8 @@ npx -y socialcrawl@latest <workflow> "<input>"
 ```
 
 The CLI prints the price, then runs without asking: a default run, or a `--deep` run when the person wants the full read. If their balance cannot cover the whole run, it reads what the balance covers, says what it left out, and ends with a top-up link. Use `--plan` only when the person asks what a run would cost without running it.
+
+Each workflow has its own options, and `npx -y socialcrawl@latest <workflow> --help` lists them. Pass what the person gave: a website as `--website <domain>`, a word with other meanings as `--about "<one plain sentence>"`, dates as `--since`/`--until`.
 
 ## 4. Answer from the report
 
