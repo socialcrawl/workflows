@@ -34,6 +34,7 @@ Then ask your agent "what went viral about AI coding tools this week?". A new ac
 | [`competitor-research`](skills/competitor-research/) | two to five brands | each brand's share of the posts read per platform, its best post against its author's usual reach, and what its audience asks and complains about | 48 credits |
 | [`post-tracker`](skills/post-tracker/) | a post link | its views, likes, comments and quotes now and at every later reading, against its author's usual reach, with a chart | 2 to 5 credits, then 1 a reading |
 | [`video-teardown`](skills/video-teardown/) | a video link | how it did against its creator's earlier videos, a storyboard of what is on screen and said, its words, sound and comments | 7 to 29 credits, by platform |
+| [`social-teardown`](skills/social-teardown/) | an account, or several handles of one brand | the posts that broke out against its own, what its top posts share, its launches, who carried them, what people ask, and where it sends people | 77 credits |
 
 Each cost was measured on 27/11/2026 with nothing cached; each workflow's page gives the input and the request ids. `--deep` reads more and costs more, and the run says how much before it starts.
 
@@ -64,6 +65,7 @@ Every card below comes from a real run on 27/11/2026. Click one for its full rep
 </tr>
 <tr>
 <td valign="top"><a href="skills/video-teardown/examples/report.md"><img src="skills/video-teardown/examples/card.svg" alt="video-teardown card"></a><br><b>video-teardown</b> on an Instagram reel: 54x its creator's usual views, with a storyboard of what is on screen second by second.</td>
+<td valign="top"><a href="skills/social-teardown/examples/report.md"><img src="skills/social-teardown/examples/card.svg" alt="social-teardown card"></a><br><b>social-teardown</b> "@notionhq": 10 of its 101 posts read broke out, the largest at 46.6x its usual views, and together they carry 47% of the views.</td>
 </tr>
 </table>
 
