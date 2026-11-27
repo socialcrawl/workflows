@@ -29,7 +29,7 @@ If your keyword means something else outside your field, add one sentence: `--ab
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: no thread beat its community's usual top post three times over; the closest, a question in r/nextjs, sat at 2.8 times the median of the month's earlier top posts there. 9 of 31 threads asked for a recommendation, and 3 of the 4 communities read limit promotion in their rules. A run folder also holds `report.html` with charts, `data/` with every thread and comment as CSV, and `responses.jsonl` with every API response.
+The full report is in [examples/report.md](examples/report.md). In short: no thread beat its community's usual top post three times over; the closest, a question in r/nextjs, sat at 2.67 times the median of the month's earlier top posts there. 9 of 33 threads asked for a recommendation, and 3 of the 4 communities read limit promotion in their rules. A run folder also holds `report.html` with charts, `data/` with every thread and comment as CSV, and `responses.jsonl` with every API response.
 
 The example drops the links to members' posts; your own run keeps them.
 
@@ -37,12 +37,12 @@ The example drops the links to members' posts; your own run keeps them.
 
 | Run | Reads | Credits |
 | --- | --- | --- |
-| Default | the month's top threads and this week's new ones, 4 communities, 3 comment trees | 25 measured, quoted at about 29, at most 38 |
-| `--deep` | a year of threads, 8 communities, 8 comment trees | 61 measured, quoted at about 76, at most 106 |
+| Default | the month's top threads and this week's new ones, 4 communities, 3 comment trees | 28 measured, quoted at about 29, at most 38 |
+| `--deep` | a year of threads, 8 communities, 8 comment trees | 67 measured, quoted at about 76, at most 106 |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "headless CMS", uncached: default 25 credits, 13 calls, 38 s (req-AeeJAqfNsvqwhYkD to req-h8TPvc9FwtxeYDox); deep 61 credits, 26 calls, 78 s (req-ZoV4HN9AKbfVR1pT to req-OG6twhmRZoZqGwf5).
+Measured 27/11/2026 on "headless CMS", uncached, with the topic filter's judging billed: default 28 credits, 13 calls, 50 s (req-pUASDT3HdJTCfnIS to req-7wupqLjDG6v4MuAK); deep 67 credits, 26 calls, 71 s (req-9BihzRrbIy5QX72Z to req-NfKO9ZeNpwvAdOJt).
 
 ## How it measures a thread
 
