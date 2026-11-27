@@ -24,13 +24,15 @@ npx -y socialcrawl@latest instagram-marketing "home workouts"
 
 If your keyword means something else outside your field, add one sentence: `--about "workouts people do at home without a gym"`. Only reels about that are kept.
 
+It reads the last 30 days unless you say otherwise: `--since 2026-11-01 --until 2026-11-15` for a window of your own, or `--since 2000-01-01` for every reel the search finds, old hits included.
+
 ## Example
 
 `instagram-marketing "AI coding tools"`, run on 27/11/2026:
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: 4 of the 5 reels measured broke out at 3 times or more their creator's usual views, out of 40 found above 1,000 views. The largest, @ai.nxtlvl's, had 423,930 views against a median of 7,927 over its 9 earlier reels; two of the four ran 30 to 60 seconds. The 15 comments read on the top reel held no question or complaint the labels could find. A run folder also holds `report.html` with charts, `data/` with every reel and comment as CSV, and `responses.jsonl` with every API response.
+The full report is in [examples/report.md](examples/report.md). In short, over 29/10 to 27/11/2026: all 5 reels measured broke out at 3 times or more their creator's usual views, out of 7 found in the window above 1,000 views. The largest, @ai.nxtlvl's, had 424,044 views against a median of 7,927 over its 9 earlier reels; three of the five ran 1 to 3 minutes. The 15 comments read on the top reel held no question or complaint the labels could find. A run folder also holds `report.html` with charts, `data/` with every reel and comment as CSV, and `responses.jsonl` with every API response.
 
 The example names only accounts with 10,000 followers or more and links no one else's reels; your own run keeps every link in `data/posts.csv`.
 
@@ -38,16 +40,16 @@ The example names only accounts with 10,000 followers or more and links no one e
 
 | Run | Reads | Credits |
 | --- | --- | --- |
-| Default | 2 search pages, follower counts for the 8 most viewed creators, 6 creators measured, 1 comment section, 1 transcript | 48 measured, quoted at about 42, at most 60 |
-| `--deep` | 4 search pages, 20 follower counts, 15 creators, 6 comment sections of 2 pages, 3 transcripts | quoted at about 173, at most 200; not yet measured |
+| Default | 2 search pages cut to the last 30 days, follower counts for the 6 most viewed creators and up to 5 break-outs' creators, 6 creators measured, 1 comment section, 1 transcript | 39 measured, quoted at about 42, at most 60 |
+| `--deep` | 2 undated and 2 dated search pages (with view counts), 30 follower counts, 15 creators, 6 comment sections of 2 pages, 3 transcripts | quoted at about 183, at most 240; not yet measured |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", uncached: default 48 credits, 26 calls, 139 s (req-mEYFQ12GfVL0T2nv to req-VzuVjKkZxWq4Ctez).
+Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 39 credits, 18 calls, 104 s (req-4jVKL3bqC4PPQ8YR to req-kyccET91LcJxiuqK).
 
 ## How it measures a reel
 
-A reel's views are divided by the median views of the same creator's 8 to 20 reels published before it, the reel itself left out. Under 8 earlier reels it gives no number. 3 times or more is a break-out. Instagram's search shows no follower counts, so the run reads them for the most viewed creators (1 credit each) and reads creators in order of views over followers, reels from the last 30 days first, as the TikTok workflow does. Busy creators post daily, so a short baseline reads up to three more pages to reach the reels before the candidate. The search sends no date window: on Instagram a dated search returns reels without their view counts.
+A reel's views are divided by the median views of the same creator's 8 to 20 reels published before it, the reel itself left out. Under 8 earlier reels it gives no number. 3 times or more is a break-out. Instagram's search shows no follower counts, so the run reads them for the most viewed creators (1 credit each) and reads creators in order of views over followers, as the TikTok workflow does. Busy creators post daily, so a short baseline reads up to three more pages to reach the reels before the candidate. The default search sends no date window, because on Instagram a dated search returns reels without their view counts unless each one is paid for; the reels are cut to the window by date instead. `--deep` adds the dated search and pays for the view counts.
 
 ## What it cannot read
 
@@ -55,6 +57,7 @@ A reel's views are divided by the median views of the same creator's 8 to 20 ree
 - Creators beyond the 6 measured (15 with `--deep`): their reels are listed without a multiple.
 - Follower counts of creators outside the most viewed 8: those accounts are described, not named.
 - Music: Instagram's search gives none. The run takes a reel's music from its own row on its creator's reel list, so only reels whose creators were measured show music, and only licensed tracks, because Instagram names no original audio there.
+- Reels posted before the window: they are counted and left out; `--since 2000-01-01` reads all time.
 - Whether a post was paid for: Instagram does not say, and the report never calls an account paid.
 
 ## What it calls

@@ -24,13 +24,15 @@ npx -y socialcrawl@latest youtube-marketing "home espresso"
 
 If your keyword means something else outside your field, add one sentence: `--about "making espresso at home"`. Only videos about that are kept.
 
+It reads the last 30 days unless you say otherwise: `--since 2026-11-01 --until 2026-11-15` for a window of your own, or `--since 2000-01-01` for every video the search finds, old hits included.
+
 ## Example
 
 `youtube-marketing "AI coding tools"`, run on 27/11/2026:
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: 7 of the 8 videos measured broke out at 3 times or more their channel's usual views, out of 43 found above 1,000 views. The largest was a Short from a channel with 3,430 subscribers: 559,006 views against a median of 548 over its 20 Shorts before it, all from 2023, so it is an old hit, as the dates beside the multiple show. Among channels big enough to name, @insiderforce's video reached 205 times its median. The 300 comments read held 28 questions and 8 complaints. A run folder also holds `report.html` with charts, `data/` with every video and comment as CSV, and `responses.jsonl` with every API response.
+The full report is in [examples/report.md](examples/report.md). In short, over 29/10 to 27/11/2026: 8 of the 12 videos measured broke out at 3 times or more their channel's usual views, out of 18 found in the window above 1,000 views. The largest, @griffinwdesigns's, had 472,754 views against a median of 1,199 over its 9 earlier videos. Three of the eight ran 5 to 10 minutes. The 192 comments read held 31 questions and 20 complaints. A run folder also holds `report.html` with charts, `data/` with every video and comment as CSV, and `responses.jsonl` with every API response.
 
 The example names only channels with 10,000 subscribers or more and links no one else's videos; your own run keeps every link in `data/posts.csv`.
 
@@ -38,22 +40,23 @@ The example names only channels with 10,000 subscribers or more and links no one
 
 | Run | Reads | Credits |
 | --- | --- | --- |
-| Default | two searches (videos and Shorts), one batch lookup of likes and durations, one of subscribers, 10 channel shelves, 3 comment sections, 2 transcripts | 41 measured, quoted at about 33, at most 49 |
-| `--deep` | three searches of 3 pages, 25 channel shelves of 2 pages, 8 comment sections of 2 pages, 5 transcripts | quoted at about 119, at most 156; not yet measured |
+| Default | two searches (videos of the last 30 days, and Shorts cut to it), one batch lookup of likes and durations, one of subscribers, 10 channel shelves, 3 comment sections, 2 transcripts | 34 measured, quoted at about 33, at most 49 |
+| `--deep` | two searches of 3 pages, 25 channel shelves of 2 pages, 8 comment sections of 2 pages, 5 transcripts | quoted at about 113, at most 141; not yet measured |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", uncached: default 41 credits, 26 calls, 224 s (req-JShBZ0ZM68kkInHj to req-1DVC4CW36HIgNr2S). It cost more than the quote's expected figure because most channel shelves needed a second page; it stayed under the quote's ceiling.
+Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 34 credits, 19 calls, 86 s (req-VA3PVDlVrWddMDBp to req-xU1GxEmPsxq9w7Z7).
 
 ## How it measures a video
 
-A video's views are divided by the median views of the same channel's 8 to 20 uploads of the same kind published before it: a Short against the channel's Shorts shelf, a long video against its Videos tab, the video itself left out. Under 8 earlier uploads it gives no number. 3 times or more is a break-out. Search Shorts carry no channel, so one batch lookup fills each video's channel, likes and duration, and a second gives each channel's subscriber count. Channels are read in order of views: views over subscribers was a poor guide to a channel's own median when measured.
+The video search asks YouTube for this month; the Shorts search cannot take a date, so its Shorts are cut to the window by their publish date. A video's views are divided by the median views of the same channel's 8 to 20 uploads of the same kind published before it: a Short against the channel's Shorts shelf, a long video against its Videos tab, the video itself left out. Under 8 earlier uploads it gives no number. 3 times or more is a break-out. Search Shorts carry no channel, so one batch lookup fills each video's channel, likes and duration, and a second gives each channel's subscriber count. Channels are read in order of views: views over subscribers was a poor guide to a channel's own median when measured.
 
 ## What it cannot read
 
 - Who shared a video: YouTube has no list of who shared it.
 - Channels beyond the 10 measured (25 with `--deep`): their videos are listed without a multiple.
 - Sound: YouTube rows carry no music, so the sound table stays empty.
+- Videos posted before the window: they are counted and left out; `--since 2000-01-01` reads all time.
 - Sponsorship: the report does not read YouTube's paid-promotion flag and never calls a channel paid.
 
 ## What it calls

@@ -31,7 +31,9 @@ Use the words people put in YouTube titles: a topic ("home espresso"), a product
 npx -y socialcrawl@latest youtube-marketing "<keyword>"
 ```
 
-The CLI prints the price (about 33 credits, at most 49) and runs. Reading channel shelves is slow, so a run takes three to four minutes. Add `--deep` when the person wants three searches of 3 pages, 25 channels measured and 8 comment sections (about 119 credits, at most 156). If their balance is short, the run reads what it covers and says what it left out.
+The CLI prints the price (about 33 credits, at most 49) and runs. Reading channel shelves is slow, so a run takes three to four minutes. Add `--deep` when the person wants two searches of 3 pages, 25 channels measured and 8 comment sections (about 113 credits, at most 141). If their balance is short, the run reads what it covers and says what it left out.
+
+By default it reads the last 30 days. If the person names a period, pass `--since YYYY-MM-DD` and `--until YYYY-MM-DD`; if they ask for all-time hits, pass `--since 2000-01-01`. The report's first line states the window: say it in your answer, so "breaking out" is never read as all time.
 
 ## 4. Answer from the report
 

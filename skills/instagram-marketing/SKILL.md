@@ -31,7 +31,9 @@ Use the words people put in reel captions: a topic ("home workouts"), a product 
 npx -y socialcrawl@latest instagram-marketing "<keyword>"
 ```
 
-The CLI prints the price (about 42 credits, at most 60) and runs. Instagram's search is slow, so a run takes about two minutes. Add `--deep` when the person wants four search pages, 15 creators measured and 6 comment sections (about 173 credits, at most 200). If their balance is short, the run reads what it covers and says what it left out.
+The CLI prints the price (about 42 credits, at most 60) and runs. Instagram's search is slow, so a run takes about two minutes. Add `--deep` when the person wants four search pages, 15 creators measured and 6 comment sections (about 183 credits, at most 240). If their balance is short, the run reads what it covers and says what it left out.
+
+By default it reads the last 30 days. If the person names a period, pass `--since YYYY-MM-DD` and `--until YYYY-MM-DD`; if they ask for all-time hits, pass `--since 2000-01-01`. The report's first line states the window: say it in your answer, so "breaking out" is never read as all time.
 
 ## 4. Answer from the report
 

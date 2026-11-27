@@ -33,6 +33,8 @@ npx -y socialcrawl@latest tiktok-marketing "<keyword>"
 
 The CLI prints the price (about 41 credits, at most 55) and runs. Add `--deep` when the person wants three searches, 15 creators measured and 8 comment sections (about 124 credits, at most 176). If their balance is short, the run reads what it covers and says what it left out.
 
+By default it reads the last 30 days. If the person names a period, pass `--since YYYY-MM-DD` and `--until YYYY-MM-DD`; if they ask for all-time hits, pass `--since 2000-01-01`. The report's first line states the window: say it in your answer, so "breaking out" is never read as all time.
+
 ## 4. Answer from the report
 
 The run ends by printing the path of its `report.html`. Read `report.md` in the same folder and answer in a few lines:
