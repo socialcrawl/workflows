@@ -10,8 +10,6 @@
 
 ---
 
-> **Status, 27/11/2026:** v0.1.0 is close to release. Until the CLI is on npm, run it from a terminal as `npx -y github:socialcrawl/cli`, for example `npx -y github:socialcrawl/cli init`. The skills call `socialcrawl@latest`, so asking your agent works from the first release.
-
 ```bash
 npx -y socialcrawl@latest init
 ```
