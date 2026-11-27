@@ -30,7 +30,7 @@ If your topic means something else outside your field, add one sentence: `--abou
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: 12 posts broke out at 3 times or more their author's usual reach, on 5 of the 6 platforms, out of 42 above the reach floor among 103 posts read. The largest was a TikTok video from @benkimball.ai at 110x: 114,914 views against a median of 1,046 over the creator's 17 earlier videos, and still rising when it was read. Next came a YouTube video from @greatlearning at 44x. LinkedIn's 2 posts above the floor did not break out. A run folder also holds `report.html` with a chart, `data/` with every post as CSV, and `responses.jsonl` with every API response.
+The full report is in [examples/report.md](examples/report.md). In short: 11 posts broke out at 3 times or more their author's usual reach, on 5 of the 6 platforms, out of 36 above the reach floor among 104 posts read. The largest was an X post from an account with 2,447 followers, at 48.1x: 46,493 views against a median of 967 over its 20 earlier posts. The report describes that account rather than naming it, since it is under 10,000 followers. Next came an Instagram reel from @benkimball.ai at 33.4x, still rising when it was read. None of LinkedIn's 9 posts passed its reach floor. A run folder also holds `report.html` with a chart, `data/` with every post as CSV, and `responses.jsonl` with every API response.
 
 The example names only accounts with 10,000 followers or more and links only their posts; your own run keeps every row in `data/`.
 
@@ -38,12 +38,12 @@ The example names only accounts with 10,000 followers or more and links only the
 
 | Run | Reads | Credits |
 | --- | --- | --- |
-| Default | one search per platform (two pages on X), each author's earlier posts inside a share per platform, the retweeters of the top 2 X break-outs, up to 5 account sizes | 73 measured, quoted at about 67, at most 100 |
-| `--deep` | the same searches, 2.5 times each platform's share of authors, the retweeters of the top 5 X break-outs, up to 5 account sizes | quoted at about 140, at most 181; not yet measured |
+| Default | one search per platform (two pages on X), each author's earlier posts inside a share per platform, the retweeters of the top 2 X break-outs, the size of each break-out's account the search left out | 61 measured, quoted at about 67, at most 100 |
+| `--deep` | the same searches, 2.5 times each platform's share of authors, the retweeters of the top 5 X break-outs, the same account sizes | quoted at about 140, at most 196; not yet measured |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", uncached: default 73 credits, 48 calls, 199 s (req-aXoRd4iL6D6iX9Tn to req-Y8dySEtZSukfnoXX).
+Measured 27/11/2026 on "AI coding tools", uncached: default 61 credits, 46 calls, 182 s (req-DtJTJeuLgOJu2QcZ to req-VKFIq42CM7hf7e6q).
 
 ## How it measures a post
 
@@ -52,7 +52,7 @@ A post's views (likes on Instagram and LinkedIn, score on Reddit) are divided by
 ## What it cannot read
 
 - Views on LinkedIn, and on Instagram's search by date: those posts are measured on likes.
-- The size of an account the search returns without a follower count, unless its post is strong enough for the card: up to 5 of those get a profile read (1 credit each). The rest are called "an account of unknown size" and not named.
+- The size of an account the search returns without a follower count, when its post did not break out. Each break-out's account gets a profile read (1 credit, up to 20 a run); one that cannot be read is called "an account of unknown size" and not named.
 - Authors past each platform's share of the budget: their posts are listed without a multiple, and the report says which ones.
 - An author with fewer than 8 earlier posts gets no multiple.
 - Who shared a post, except the retweeters of the top X break-outs.

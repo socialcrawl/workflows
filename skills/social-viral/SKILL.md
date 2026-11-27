@@ -31,7 +31,7 @@ Use the words people write in posts: "AI coding tools", "running shoes", a produ
 npx -y socialcrawl@latest social-viral "<topic>"
 ```
 
-The CLI prints the price (about 67 credits, at most 100) and runs. Add `--deep` when the person wants more authors measured (about 140 credits, at most 181). If their balance is short, the run reads what it covers and says what it left out.
+The CLI prints the price (about 67 credits, at most 100) and runs. Add `--deep` when the person wants more authors measured (about 140 credits, at most 196). If their balance is short, the run reads what it covers and says what it left out.
 
 ## 4. Answer from the report
 
