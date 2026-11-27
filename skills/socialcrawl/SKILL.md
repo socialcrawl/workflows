@@ -26,6 +26,9 @@ Run `npx -y socialcrawl@latest whoami`. If it says no key is set, run `npx -y so
 | The person wants | Workflow |
 | --- | --- |
 | What broke out this week on a topic, across platforms | `social-viral` |
+| What works on TikTok for a keyword: the videos breaking out, their hooks and sounds, the comments | `tiktok-marketing` |
+| What works in Instagram reels for a keyword: the reels breaking out, their hooks, the comments | `instagram-marketing` |
+| What works on YouTube for a keyword: the videos and Shorts breaking out, their titles, the comments | `youtube-marketing` |
 
 If two fit, ask one short question. If none fits, say so and suggest the closest.
 

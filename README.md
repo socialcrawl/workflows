@@ -47,6 +47,9 @@ In Claude Code you can also add this repository as a plugin marketplace: `/plugi
 | --- | --- | --- |
 | [`socialcrawl`](skills/socialcrawl/) | a question in plain words | the right workflow, run for you |
 | [`social-viral`](skills/social-viral/) | a topic | the posts that broke out this week on X, TikTok, Instagram, YouTube, Reddit and LinkedIn, each against its author's earlier posts |
+| [`tiktok-marketing`](skills/tiktok-marketing/) | a keyword | the TikTok videos breaking out on it against their creators' earlier videos, with their lengths, hooks, sounds and what the comments ask |
+| [`instagram-marketing`](skills/instagram-marketing/) | a keyword | the Instagram reels breaking out on it against their creators' earlier reels, with their lengths, hooks and what the comments ask |
+| [`youtube-marketing`](skills/youtube-marketing/) | a keyword | the YouTube videos and Shorts breaking out on it against their channels' earlier uploads, with their lengths, titles and what the comments ask |
 
 ## Use it
 

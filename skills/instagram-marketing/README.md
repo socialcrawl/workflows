@@ -1,0 +1,66 @@
+# instagram-marketing
+
+Give it a keyword. It reads Instagram's reels on it and tells you:
+
+- which reels broke out, measured against each creator's own earlier reels;
+- what the break-outs did: length, hook, music, hashtags, posting hour;
+- what people ask and complain about in the comments, quoted;
+- what the top reel says in its first seconds;
+- what will not copy for a smaller account, and what to try next.
+
+It only reads data, and never posts, likes, follows or comments for you.
+
+## Install
+
+```bash
+npx -y socialcrawl@latest init
+```
+
+`init` asks for your SocialCrawl key, or signs you in by email (100 free credits, no card), and installs the skill into the agents it finds. Then ask your agent "what's working in Instagram reels for home workouts?", or run it in a terminal:
+
+```bash
+npx -y socialcrawl@latest instagram-marketing "home workouts"
+```
+
+If your keyword means something else outside your field, add one sentence: `--about "workouts people do at home without a gym"`. Only reels about that are kept.
+
+## Example
+
+`instagram-marketing "AI coding tools"`, run on 27/11/2026:
+
+![The card of the example run](examples/card.svg)
+
+The full report is in [examples/report.md](examples/report.md). In short: 4 of the 5 reels measured broke out at 3 times or more their creator's usual views, out of 40 found above 1,000 views. The largest, @ai.nxtlvl's, had 423,930 views against a median of 7,927 over its 9 earlier reels; two of the four ran 30 to 60 seconds. The 15 comments read on the top reel held no question or complaint the labels could find. A run folder also holds `report.html` with charts, `data/` with every reel and comment as CSV, and `responses.jsonl` with every API response.
+
+The example names only accounts with 10,000 followers or more and links no one else's reels; your own run keeps every link in `data/posts.csv`.
+
+## What it costs
+
+| Run | Reads | Credits |
+| --- | --- | --- |
+| Default | 2 search pages, follower counts for the 8 most viewed creators, 6 creators measured, 1 comment section, 1 transcript | 48 measured, quoted at about 42, at most 60 |
+| `--deep` | 4 search pages, 20 follower counts, 15 creators, 6 comment sections of 2 pages, 3 transcripts | quoted at about 173, at most 200; not yet measured |
+
+The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
+
+Measured 27/11/2026 on "AI coding tools", uncached: default 48 credits, 26 calls, 139 s (req-mEYFQ12GfVL0T2nv to req-VzuVjKkZxWq4Ctez).
+
+## How it measures a reel
+
+A reel's views are divided by the median views of the same creator's 8 to 20 reels published before it, the reel itself left out. Under 8 earlier reels it gives no number. 3 times or more is a break-out. Instagram's search shows no follower counts, so the run reads them for the most viewed creators (1 credit each) and reads creators in order of views over followers, reels from the last 30 days first, as the TikTok workflow does. Busy creators post daily, so a short baseline reads up to three more pages to reach the reels before the candidate. The search sends no date window: on Instagram a dated search returns reels without their view counts.
+
+## What it cannot read
+
+- Who shared a reel: Instagram has no list of reposters.
+- Creators beyond the 6 measured (15 with `--deep`): their reels are listed without a multiple.
+- Follower counts of creators outside the most viewed 8: those accounts are described, not named.
+- Music: Instagram's search gives none. The run takes a reel's music from its own row on its creator's reel list, so only reels whose creators were measured show music, and only licensed tracks, because Instagram names no original audio there.
+- Whether a post was paid for: Instagram does not say, and the report never calls an account paid.
+
+## What it calls
+
+SocialCrawl's API only (`instagram/search/reels`, `instagram/profile`, `instagram/profile/reels`, `instagram/post/comments`, `instagram/media/transcript`), with your key. No other service.
+
+## Code
+
+The workflow's code and tests are in [socialcrawl/cli](https://github.com/socialcrawl/cli) under `src/workflows/instagram-marketing/` and `src/workflows/_video/`.
