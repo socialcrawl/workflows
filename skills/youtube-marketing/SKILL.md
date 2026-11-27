@@ -35,7 +35,7 @@ The CLI prints the price (about 33 credits, at most 49) and runs. Reading channe
 
 ## 4. Answer from the report
 
-The run prints the path of its folder. Read `report.md` there and answer in a few lines:
+The run ends by printing the path of its `report.html`. Read `report.md` in the same folder and answer in a few lines:
 
 1. How many videos broke out (3 times or more their channel's usual views) out of how many were measured, and the largest, with its multiple and the dates its baseline covers. Say whether it is a Short or a long video: each is measured against its own kind.
 2. What the break-outs share: length and title kind, from the "What the break-outs did" table. Say these are counts unless the report calls a pattern.

@@ -14,7 +14,7 @@ YouTube · topic filter: `AI coding tools` · 53 videos read · default run
 
 Each video is measured against its channel's own videos published before it; 7 of 8 reached 3 times or more [F1].
 
-| # | Account | × usual | Views | Baseline | Length | Hook | Link |
+| # | Account | × its usual views | Views | Baseline | Length | Hook | Link |
 |---|---|---|---|---|---|---|---|
 | 1 | a channel with 3,430 subscribers | 1020x | 559,006 | median of 548 views over 20 earlier videos, 23/08 to 24/09/2023 | 30 to 60 s | GoodBye ChatGPT🤡/ Advanced Ai Code Generator🫡⚡ | in data/posts.csv |
 | 2 | a channel with 3,910 subscribers | 268x | 430,522 | median of 1,608 views over 10 earlier videos, 10/08 to 10/10/2025 | under 15 s | Free open source AI tool alternatives | in data/posts.csv |

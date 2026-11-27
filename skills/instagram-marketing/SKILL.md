@@ -35,7 +35,7 @@ The CLI prints the price (about 42 credits, at most 60) and runs. Instagram's se
 
 ## 4. Answer from the report
 
-The run prints the path of its folder. Read `report.md` there and answer in a few lines:
+The run ends by printing the path of its `report.html`. Read `report.md` in the same folder and answer in a few lines:
 
 1. How many reels broke out (3 times or more their creator's usual views) out of how many were measured, and the largest, with its multiple and the dates its baseline covers. If none did, say that none did.
 2. What the break-outs share: length, hook, music, from the "What the break-outs did" table. Say these are counts unless the report calls a pattern.

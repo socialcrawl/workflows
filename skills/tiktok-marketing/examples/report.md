@@ -14,7 +14,7 @@ TikTok · topic filter: `AI coding tools` · 47 videos read · default run
 
 Each video is measured against its creator's own videos published before it; 8 of 9 reached 3 times or more [F1].
 
-| # | Account | × usual | Views | Baseline | Length | Hook | Link |
+| # | Account | × its usual views | Views | Baseline | Length | Hook | Link |
 |---|---|---|---|---|---|---|---|
 | 1 | a creator with 332 followers | 861x | 37,440 | median of 43.5 views over 20 earlier videos, 20/11 to 22/11/2026 | 30 to 60 s | Mayan, Claude Code $100/bln bisa jalan Rp0 modal satu repo GitHub ini. | in data/posts.csv |
 | 2 | @jameseer33 | 497x | 1,129,302 | median of 2,270 views over 11 earlier videos, 19/10 to 24/10/2026 | 3 min or more | How Modders Used AI to Turn Any App Into Source Code | https://www.tiktok.com/@jameseer33/video/7708004958687284510 |

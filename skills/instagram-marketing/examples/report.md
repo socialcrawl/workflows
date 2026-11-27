@@ -14,7 +14,7 @@ Instagram · topic filter: `AI coding tools` · 40 reels read · default run
 
 Each reel is measured against its creator's own reels published before it; 4 of 5 reached 3 times or more [F1].
 
-| # | Account | × usual | Views | Baseline | Length | Hook | Link |
+| # | Account | × its usual views | Views | Baseline | Length | Hook | Link |
 |---|---|---|---|---|---|---|---|
 | 1 | @ai.nxtlvl | 53x | 423,930 | median of 7,927 views over 9 earlier reels, 26/10 to 03/11/2026 | 30 to 60 s | Comment "𝗥𝗘𝗣𝗢" 👈 and I'll DM you all 9 links 🔗 | https://www.instagram.com/reel/DfU2nIgt8XK/ |
 | 2 | @itsgoharzaman | 36x | 416,142 | median of 11,701.5 views over 16 earlier reels, 23/10 to 16/11/2026 | under 15 s | What does the modern learning and coding stack look like in 2026? | https://www.instagram.com/reel/DfoEiQsxRyU/ |

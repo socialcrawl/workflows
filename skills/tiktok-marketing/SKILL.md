@@ -35,7 +35,7 @@ The CLI prints the price (about 41 credits, at most 55) and runs. Add `--deep` w
 
 ## 4. Answer from the report
 
-The run prints the path of its folder. Read `report.md` there and answer in a few lines:
+The run ends by printing the path of its `report.html`. Read `report.md` in the same folder and answer in a few lines:
 
 1. How many videos broke out (3 times or more their creator's usual views) out of how many were measured, and the largest, with its multiple and the dates its baseline covers.
 2. What the break-outs share: length, hook, sound, from the "What the break-outs did" table. Say these are counts unless the report calls a pattern.
