@@ -1,14 +1,14 @@
 # /social-pulse "Notion"
 
-21/11/2026 to 27/11/2026 against the week before · 192 posts read this week · v0.1.0
+21/11/2026 to 27/11/2026 against the week before · 190 posts read this week · v0.1.0
 
 ## In short
 
-1. Notion: 69 on-topic posts this week, up 33% on 52 the week before [F1]
-2. 64% positive and 15% negative of the 53 posts with a stance, against 42% and 23% the week before [F2]
-3. 4 questions, 4 complaints, 4 recommendations and 3 posts about switching this week (0, 1, 0 and 0 the week before) [F3]
-4. TikTok: an account with 185 followers at 16,214x its author's median views over 11 earlier posts [F4]
-5. TikTok: @itsjeffdotcom at 8x its author's median views over 16 earlier posts [F5]
+1. Notion: 67 on-topic posts this week, up 34% on 50 the week before [F1]
+2. 68% positive and 14% negative of the 50 posts with a stance, against 41% and 21% the week before [F2]
+3. 5 questions, 3 complaints, 4 recommendations and 3 posts about switching this week (0, 1, 0 and 1 the week before) [F3]
+4. TikTok: @gwen.ignacioo at 10.7x its author's median views over 16 earlier posts [F4]
+5. TikTok: @itsjeffdotcom at 4.6x its author's median views over 16 earlier posts [F5]
 
 ## Week on week
 
@@ -16,25 +16,25 @@ This week is 21/11/2026 to 27/11/2026; the week before, 14/11/2026 to 20/11/2026
 
 | | This week | The week before | Change |
 | --- | --- | --- | --- |
-| On-topic posts | 69 | 52 | +33% |
-| Questions | 4 | 0 |  |
-| Complaints | 4 | 1 | +300% |
+| On-topic posts | 67 | 50 | +34% |
+| Questions | 5 | 0 |  |
+| Complaints | 3 | 1 | +200% |
 | Recommendations | 4 | 0 |  |
-| About switching | 3 | 0 |  |
-| Selling something | 25 | 8 | +213% |
-| Positive | 64% | 42% | |
-| Negative | 15% | 23% | |
+| About switching | 3 | 1 | +200% |
+| Selling something | 23 | 8 | +188% |
+| Positive | 68% | 41% | |
+| Negative | 14% | 21% | |
 
 ## By platform
 
 | Platform | This week | The week before |
 | --- | --- | --- |
-| Instagram | 3 | 11 |
-| LinkedIn | 1 | 0 |
-| Reddit | 6 | 1 |
-| TikTok | 17 | 1 |
-| X | 5 | 6 |
-| YouTube | 37 | 33 |
+| Instagram | 3 | 9 |
+| LinkedIn | 4 | 0 |
+| Reddit | 5 | 0 |
+| TikTok | 15 | 2 |
+| X | 4 | 6 |
+| YouTube | 36 | 33 |
 
 ## What people asked
 
@@ -46,14 +46,16 @@ This week is 21/11/2026 to 27/11/2026; the week before, 14/11/2026 to 20/11/2026
 
 > What features do you guys mostly use in Notion and which ones do you least use? Curious to know what attracts you To Notion and what do you simply hate what features do you mostly end up using databases text notes relations roll ups, formu… (Reddit, a post in r/Notion)
 
+> One of my favourite system design questions: Notion split its Postgres database into 480 shards. Why 480? Why not 500, or a nice round 512? I saw this question on X this week and most answers said "performance". It's not really about perfo… (LinkedIn, an account of unknown size)
+
 ## Posts breaking out
 
 Each post is compared with its own author's earlier posts; a break-out is 3x or more.
 
 | # | Platform | Post | Multiple | Reach | Compared with |
 | --- | --- | --- | --- | --- | --- |
-| 1 [F4] | TikTok | an account with 185 followers | 16,214x | 48,642 views | median 3 over 11 posts |
-| 2 [F5] | TikTok | @itsjeffdotcom, [post](https://www.tiktok.com/@itsjeffdotcom/video/7712184712541850902) | 8x | 21,161 views | median 2,639 over 16 posts |
+| 1 [F4] | TikTok | @gwen.ignacioo, [post](https://www.tiktok.com/@gwen.ignacioo/video/7711810533501979943) | 10.7x | 18,479 views | median 1,725 over 16 posts |
+| 2 [F5] | TikTok | @itsjeffdotcom, [post](https://www.tiktok.com/@itsjeffdotcom/video/7712184712541850902) | 4.6x | 21,318 views | median 4,633 over 16 posts |
 
 ## What won't copy
 
@@ -77,13 +79,11 @@ socialcrawl social-viral "Notion"
 
 ## How this was read
 
-- this-week:read, prism/discover: read 69 rows (15 credits)
-- week-before:read, prism/discover: read 52 rows (20 credits)
+- this-week:read, prism/discover: read 67 rows (16 credits)
+- week-before:read, prism/discover: read 50 rows (21 credits)
 
 ## What we could not verify
 
-- 1 TikTok post above the reach floor with no multiple: not measured: the run stopped before its author's earlier posts were read
-- [F4] under 48 hours old, so its multiple can still rise
 - [F5] under 48 hours old, so its multiple can still rise
 
 ## Method notes
@@ -96,4 +96,4 @@ socialcrawl social-viral "Notion"
 
 ---
 
-Read with SocialCrawl /social-pulse · 41 credits · 10 calls · 75.9 s · 27/11/2026 · v0.1.0
+Read with SocialCrawl /social-pulse · 43 credits · 10 calls · 76.6 s · 27/11/2026 · v0.1.0

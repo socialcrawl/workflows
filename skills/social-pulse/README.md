@@ -30,18 +30,18 @@ If the name has another meaning, the `--about` sentence keeps only the posts abo
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: 69 posts were on topic this week, up 33% on 52 the week before, out of 192 read. 64% of the 53 posts with a stance were positive and 15% negative, against 42% and 23% the week before. There were 4 questions against none, and 25 posts selling something against 8. The largest break-out was a TikTok video from an account with 185 followers, at 16,214x its usual views: 48,642 views against a median of 3 over its 11 earlier videos. The report describes that account rather than naming it.
+The full report is in [examples/report.md](examples/report.md). In short: 67 posts were on topic this week, up 34% on 50 the week before, out of 190 read. 68% of the 50 posts with a stance were positive and 14% negative, against 41% and 21% the week before. There were 5 questions against none, and 23 posts selling something against 8. The largest break-out was a TikTok video from @gwen.ignacioo at 10.7x its usual views: 18,479 views against a median of 1,725 over its 16 earlier videos.
 
 ## What it costs
 
 | Run | Reads | Credits |
 | --- | --- | --- |
-| Default | one search a platform for each of the two weeks, with stance and intent labels; the earlier posts of this week's posts above the reach floor, inside a small share a platform; the size of each break-out's account the search left out | 41 measured, quoted at about 77, at most 100 |
+| Default | one search a platform for each of the two weeks, with stance and intent labels; the earlier posts of this week's posts above the reach floor, inside a small share a platform; the size of each break-out's account the search left out | 43 measured, quoted at about 77, at most 100 |
 | `--deep` | two pages a platform each week, and 2.5 times the share of earlier posts | quoted at about 162, at most 232; not yet measured |
 
 Each week's read is quoted for free first, and sent with the least ceiling that quote allows. If what is left of the run's budget no longer covers the week before, the run reads this week alone and says so.
 
-Measured 27/11/2026 on "Notion", uncached: default 41 credits, 10 calls, 76 s (req-I7XbTHPCwfHDNB2D to req-AYoqM7wkjPxooAL9).
+Measured 27/11/2026 on "Notion", uncached: default 43 credits, 10 calls, 77 s (req-4ZPjfSpNc1VPblrx to req-9pKXcEB5MwAelpbc).
 
 ## How it reads a week
 
