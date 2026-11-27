@@ -1,0 +1,42 @@
+---
+name: socialcrawl
+description: Research social media with SocialCrawl. Use when someone asks what went viral, what people say about a topic or brand on Reddit, X, TikTok, YouTube, Instagram or LinkedIn, how an account grew, or what competitors post. Picks the right SocialCrawl workflow, sets up the key the first time, runs it and reads back the report.
+license: MIT
+metadata:
+  author: socialcrawl
+  version: "0.1.0"
+  homepage: https://www.socialcrawl.dev
+  source: https://github.com/socialcrawl/workflows
+inputs:
+  - name: SOCIALCRAWL_API_KEY
+    description: SocialCrawl API key. `socialcrawl init` saves it; new accounts get 100 free credits.
+    required: true
+---
+
+# SocialCrawl
+
+Pick the workflow that fits the person's request, run it with the SocialCrawl CLI, and answer from the report it writes.
+
+## 1. Make sure the CLI and key are ready
+
+Run `npx -y socialcrawl@latest whoami`. If it says no key is set, run `npx -y socialcrawl@latest init` and let the person paste their key or sign in by email. Never ask them to paste a key into the chat, and never print it.
+
+## 2. Choose the workflow
+
+| The person wants | Workflow |
+| --- | --- |
+| What broke out this week on a topic, across platforms | `social-viral` |
+
+If two fit, ask one short question. If none fits, say so and suggest the closest.
+
+## 3. Run it
+
+```bash
+npx -y socialcrawl@latest <workflow> "<input>"
+```
+
+The CLI prints the free quote first. A default run stays inside the person's budget and runs without asking; a `--deep` run asks first. Pass `--yes` only when the person has already agreed to the quoted cost.
+
+## 4. Answer from the report
+
+The run prints the path of its folder. Read `report.md` there and answer in a few lines: the headline, the top findings with their numbers, what could not be read, and the cost. Point the person to `report.html` for the charts and `data/` for the raw rows. Never add a number that is not in the report.

@@ -1,0 +1,17 @@
+name: check
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test scripts/check.test.mjs
+      - run: node scripts/check.mjs
+      - name: Plugin manifests parse
+        run: for f in .claude-plugin/*.json .cursor-plugin/*.json .codex-plugin/*.json; do node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || exit 1; done

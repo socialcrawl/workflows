@@ -1,0 +1,12 @@
+{
+  "name": "socialcrawl-workflows",
+  "displayName": "SocialCrawl Workflows",
+  "description": "Workflow skills that read social media for you: what broke out this week, what a subreddit or a niche on X is asking, how any account grew, and what your competitors post. Built on the SocialCrawl API.",
+  "version": "0.1.0",
+  "skills": "./skills/",
+  "author": { "name": "SocialCrawl", "url": "https://www.socialcrawl.dev" },
+  "homepage": "https://www.socialcrawl.dev",
+  "repository": "https://github.com/socialcrawl/workflows",
+  "license": "MIT",
+  "keywords": ["socialcrawl", "social-media", "marketing", "viral", "reddit", "twitter", "tiktok", "youtube", "instagram", "linkedin", "competitor-research"]
+}

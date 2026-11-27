@@ -1,0 +1,7 @@
+{
+  "name": "socialcrawl-workflows",
+  "owner": { "name": "SocialCrawl", "email": "socialcrawl@ridio.io" },
+  "plugins": [
+    { "name": "socialcrawl-workflows", "source": "./", "description": "Workflow skills that read social media for you: what broke out this week, what a subreddit or a niche on X is asking, how any account grew, and what your competitors post. Built on the SocialCrawl API." }
+  ]
+}
