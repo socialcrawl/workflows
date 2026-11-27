@@ -33,6 +33,7 @@ Then ask your agent "what went viral about AI coding tools this week?". A new ac
 | [`x-marketing`](skills/x-marketing/) | a keyword | the X posts breaking out on it against their authors' earlier posts, who retweeted and quoted the top ones, which look boosted, and what the replies ask | 36 credits |
 | [`competitor-research`](skills/competitor-research/) | two to five brands | each brand's share of the posts read per platform, its best post against its author's usual reach, and what its audience asks and complains about | 48 credits |
 | [`post-tracker`](skills/post-tracker/) | a post link | its views, likes, comments and quotes now and at every later reading, against its author's usual reach, with a chart | 2 to 5 credits, then 1 a reading |
+| [`video-teardown`](skills/video-teardown/) | a video link | how it did against its creator's earlier videos, a storyboard of what is on screen and said, its words, sound and comments |
 
 Each cost was measured on 27/11/2026 with nothing cached; each workflow's page gives the input and the request ids. `--deep` reads more and costs more, and the run says how much before it starts.
 
@@ -60,6 +61,9 @@ Every card below comes from a real run on 27/11/2026. Click one for its full rep
 <tr>
 <td valign="top"><a href="skills/linkedin-marketing/examples/report.md"><img src="skills/linkedin-marketing/examples/card.svg" alt="linkedin-marketing card"></a><br><b>linkedin-marketing</b> "AI coding tools": 1 post broke out at 4.3x its author's usual likes, and 9 of the 51 comments read are phrased as questions.</td>
 <td valign="top"><a href="skills/post-tracker/examples/report.md"><img src="skills/post-tracker/examples/card.svg" alt="post-tracker card"></a><br><b>post-tracker</b> on an IBM Technology video: 19x its channel's usual views, gaining about 3,181 views an hour.</td>
+</tr>
+<tr>
+<td valign="top"><a href="skills/video-teardown/examples/report.md"><img src="skills/video-teardown/examples/card.svg" alt="video-teardown card"></a><br><b>video-teardown</b> on an Instagram reel: 54x its creator's usual views, with a storyboard of what is on screen second by second.</td>
 </tr>
 </table>
 

@@ -37,6 +37,7 @@ Run `npx -y socialcrawl@latest whoami`. If it says no key is set, ask the person
 | What works on X for a keyword: the posts breaking out, who carried them, what the replies ask | `x-marketing` |
 | Two to five brands compared: share of voice, each brand's best post, what each audience asks and complains about | `competitor-research` |
 | How one post is doing over time, against its author's usual reach | `post-tracker` |
+| One video taken apart: how it did, what is on screen and said second by second, its words, sound and comments | `video-teardown` |
 
 If two fit, ask one short question. If none fits, say so and suggest the closest.
 
