@@ -38,7 +38,7 @@ A link to one post is not an account. For one video, use `video-teardown` instea
 npx -y socialcrawl@latest social-teardown "<accounts>"
 ```
 
-The CLI prints the price (about 80 credits, at most 100) and runs. Several accounts share those 100 credits. Add `--deep` when the person wants the whole history and every top post's reposters, quotes, replies and words read, as a research piece (at most 600 credits). To tell the person the price first, run it with `--plan`, which prints the free quote and spends nothing. `--budget <n>` caps a run; `--since` and `--until` (YYYY-MM-DD) set a window. If the balance is short, the run reads what it covers and says what it left out.
+The CLI prints the price (about 80 credits, at most 100) and runs; a default run takes about 4 minutes. Several accounts share those 100 credits. Add `--deep` when the person wants the whole history and every top post's reposters, quotes, replies and words read, as a research piece (about 440 to 490 credits, at most 600, and about 20 minutes; say so when you start one). To tell the person the price first, run it with `--plan`, which prints the free quote and spends nothing. `--budget <n>` caps a run; `--since` and `--until` (YYYY-MM-DD) set a window. If the balance is short, the run reads what it covers and says what it left out.
 
 ## 4. Answer from the report
 

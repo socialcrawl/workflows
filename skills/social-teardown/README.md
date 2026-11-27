@@ -40,10 +40,10 @@ A run folder also holds `report.html` with charts, `data/` with every post read 
 
 ## What it costs
 
-| Run | Reads | Credits |
-| --- | --- | --- |
-| Default | the recent history: the newest posts and month by month back until its share runs out; on X the reposters, replies, first-hour quotes and launch posts around the top posts | about 80, at most 100, shared by all the accounts named |
-| `--deep` | the whole history from the join date, more top posts, more pages of each, Reddit and Hacker News echo of the top launches | about 490, at most 600 |
+| Run | Reads | Credits | Time |
+| --- | --- | --- | --- |
+| Default | the recent history: the newest posts and month by month back until its share runs out; on X the reposters, replies, first-hour quotes and launch posts around the top posts | 77 measured on one account, quoted at about 83, at most 100, shared by all the accounts named | about 4 minutes |
+| `--deep` | the whole history from the join date, more top posts, more pages of each, Reddit and Hacker News echo of the top launches | 438 measured, quoted at about 493, at most 600 | about 20 minutes |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
