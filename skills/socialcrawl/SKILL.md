@@ -29,6 +29,7 @@ Run `npx -y socialcrawl@latest whoami`. If it says no key is set, run `npx -y so
 | What works on TikTok for a keyword: the videos breaking out, their hooks and sounds, the comments | `tiktok-marketing` |
 | What works in Instagram reels for a keyword: the reels breaking out, their hooks, the comments | `instagram-marketing` |
 | What works on YouTube for a keyword: the videos and Shorts breaking out, their titles, the comments | `youtube-marketing` |
+| Two to five brands compared: share of voice, each brand's best post, what each audience asks and complains about | `competitor-research` |
 
 If two fit, ask one short question. If none fits, say so and suggest the closest.
 
