@@ -33,7 +33,7 @@ Then ask your agent "what went viral about AI coding tools this week?". A new ac
 | [`x-marketing`](skills/x-marketing/) | a keyword | the X posts breaking out on it against their authors' earlier posts, who retweeted and quoted the top ones, which look boosted, and what the replies ask | 36 credits |
 | [`competitor-research`](skills/competitor-research/) | two to five brands | each brand's share of the posts read per platform, its best post against its author's usual reach, and what its audience asks and complains about | 48 credits |
 | [`post-tracker`](skills/post-tracker/) | a post link | its views, likes, comments and quotes now and at every later reading, against its author's usual reach, with a chart | 2 to 5 credits, then 1 a reading |
-| [`video-teardown`](skills/video-teardown/) | a video link | how it did against its creator's earlier videos, a storyboard of what is on screen and said, its words, sound and comments |
+| [`video-teardown`](skills/video-teardown/) | a video link | how it did against its creator's earlier videos, a storyboard of what is on screen and said, its words, sound and comments | 7 to 29 credits, by platform |
 
 Each cost was measured on 27/11/2026 with nothing cached; each workflow's page gives the input and the request ids. `--deep` reads more and costs more, and the run says how much before it starts.
 

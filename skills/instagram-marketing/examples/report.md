@@ -99,6 +99,7 @@ Comments read on the top reels, labelled by the API [F8].
 |---|---|---|
 | Read deeper: more searches, more creators, more comments | `npx -y socialcrawl@latest instagram-marketing "AI coding tools" --deep` | free quote first: about 183 credits, at most 240 |
 | Track the top break-out (@ai.nxtlvl) | `npx -y socialcrawl@latest post-tracker https://www.instagram.com/reel/DfU2nIgt8XK/` | its views in 14 days against 424,044 today |
+| Take it apart shot by shot | `npx -y socialcrawl@latest video-teardown https://www.instagram.com/reel/DfU2nIgt8XK/` | what is on screen and said, its words, sound and comments |
 | Post your own reel with the length `1 to 3 min` | - | in 14 days, whether it reached 3 times your own median views |
 
 ## How this was read

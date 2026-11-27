@@ -92,6 +92,7 @@ Comments read on the top videos, labelled by the API [F11].
 |---|---|---|
 | Read deeper: more searches, more channels, more comments | `npx -y socialcrawl@latest youtube-marketing "AI coding tools" --deep` | free quote first: about 113 credits, at most 141 |
 | Track the top break-out (@griffinwdesigns) | `npx -y socialcrawl@latest post-tracker https://www.youtube.com/watch?v=zsCGS-Yzjnw` | its views in 14 days against 472,754 today |
+| Take it apart shot by shot | `npx -y socialcrawl@latest video-teardown https://www.youtube.com/watch?v=zsCGS-Yzjnw` | what is on screen and said, its words, sound and comments |
 | Post your own video with the length `5 to 10 min` | - | in 14 days, whether it reached 3 times your own median views |
 
 ## How this was read

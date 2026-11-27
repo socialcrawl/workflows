@@ -91,6 +91,7 @@ No break-out here rests on a large audience, a comment gate, a trending sound or
 |---|---|---|
 | Read deeper: more searches, more creators, more comments | `npx -y socialcrawl@latest tiktok-marketing "AI coding tools" --deep` | free quote first: about 124 credits, at most 176 |
 | Track the top break-out (@jameseer33) | `npx -y socialcrawl@latest post-tracker https://www.tiktok.com/@jameseer33/video/7708004958687284510` | its views in 14 days against 1,130,139 today |
+| Take it apart shot by shot | `npx -y socialcrawl@latest video-teardown https://www.tiktok.com/@jameseer33/video/7708004958687284510` | what is on screen and said, its words, sound and comments |
 | Post your own video with the length `30 to 60 s` | - | in 14 days, whether it reached 3 times your own median views |
 
 ## How this was read
