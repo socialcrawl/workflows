@@ -19,7 +19,7 @@ Run the `competitor-research` workflow on the person's brands and answer from th
 
 ## 1. Make sure the CLI and key are ready
 
-Run `npx -y socialcrawl@latest whoami`. If it says no key is set, run `npx -y socialcrawl@latest init` and let the person paste their key or sign in by email. Never ask them to paste a key into the chat, and never print it.
+Run `npx -y socialcrawl@latest whoami`. If it says no key is set, ask the person for the email they want to sign in with (their SocialCrawl account's, or a new one: 100 free credits, no card). Run `npx -y socialcrawl@latest init --email <their email>`, and give them the link and the 6-digit code it prints. When they say they have signed in, run `npx -y socialcrawl@latest init` to finish. If they already have a key, tell them to run `npx -y socialcrawl@latest init` in their own terminal and paste it there, or to set SOCIALCRAWL_API_KEY; never take the key in the chat. Never print a key.
 
 ## 2. Pick the brands and their category
 
