@@ -30,7 +30,7 @@ If your topic means something else outside your field, add one sentence: `--abou
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: 13 posts broke out at 3 times or more their author's usual reach, on 5 of the 6 platforms, out of 36 above the reach floor among 95 posts read. The largest was a TikTok video from @benkimball.ai at 109x: 113,866 views against a median of 1,045 over the creator's 17 earlier videos, and still rising when it was read. None of LinkedIn's 10 posts passed its reach floor. A run folder also holds `report.html` with a chart, `data/` with every post as CSV, and `responses.jsonl` with every API response.
+The full report is in [examples/report.md](examples/report.md). In short: 12 posts broke out at 3 times or more their author's usual reach, on 5 of the 6 platforms, out of 42 above the reach floor among 103 posts read. The largest was a TikTok video from @benkimball.ai at 110x: 114,914 views against a median of 1,046 over the creator's 17 earlier videos, and still rising when it was read. Next came a YouTube video from @greatlearning at 44x. LinkedIn's 2 posts above the floor did not break out. A run folder also holds `report.html` with a chart, `data/` with every post as CSV, and `responses.jsonl` with every API response.
 
 The example names only accounts with 10,000 followers or more and links only their posts; your own run keeps every row in `data/`.
 
@@ -38,12 +38,12 @@ The example names only accounts with 10,000 followers or more and links only the
 
 | Run | Reads | Credits |
 | --- | --- | --- |
-| Default | one search per platform (two pages on X), each author's earlier posts inside a share per platform, the retweeters of the top 2 X break-outs | 58 measured, quoted at about 67, at most 100 |
-| `--deep` | the same searches, 2.5 times each platform's share of authors, the retweeters of the top 5 X break-outs | quoted at about 140, at most 176; not yet measured |
+| Default | one search per platform (two pages on X), each author's earlier posts inside a share per platform, the retweeters of the top 2 X break-outs, up to 5 account sizes | 73 measured, quoted at about 67, at most 100 |
+| `--deep` | the same searches, 2.5 times each platform's share of authors, the retweeters of the top 5 X break-outs, up to 5 account sizes | quoted at about 140, at most 181; not yet measured |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", uncached: default 58 credits, 42 calls, 177 s (req-pUzy1akRCW3VuDaJ to req-4dK9eLJuH9QcB2U5).
+Measured 27/11/2026 on "AI coding tools", uncached: default 73 credits, 48 calls, 199 s (req-aXoRd4iL6D6iX9Tn to req-Y8dySEtZSukfnoXX).
 
 ## How it measures a post
 
@@ -52,7 +52,7 @@ A post's views (likes on Instagram and LinkedIn, score on Reddit) are divided by
 ## What it cannot read
 
 - Views on LinkedIn, and on Instagram's search by date: those posts are measured on likes.
-- The size of an account the search returns without a follower count: the report calls it "an account of unknown size" and does not name it.
+- The size of an account the search returns without a follower count, unless its post is strong enough for the card: up to 5 of those get a profile read (1 credit each). The rest are called "an account of unknown size" and not named.
 - Authors past each platform's share of the budget: their posts are listed without a multiple, and the report says which ones.
 - An author with fewer than 8 earlier posts gets no multiple.
 - Who shared a post, except the retweeters of the top X break-outs.
@@ -60,7 +60,7 @@ A post's views (likes on Instagram and LinkedIn, score on Reddit) are divided by
 
 ## What it calls
 
-SocialCrawl's API only (`twitter/search/tweets`, `tiktok/search`, `instagram/search/reels`, `youtube/search`, `reddit/search`, `linkedin/search/posts`, `tiktok/profile/videos`, `instagram/profile/reels`, `youtube/channel/videos`, `reddit/subreddit`, `linkedin/profile/posts`, `twitter/tweet/retweeters`), with your key. No other service.
+SocialCrawl's API only (`twitter/search/tweets`, `tiktok/search`, `instagram/search/reels`, `youtube/search`, `reddit/search`, `linkedin/search/posts`, `tiktok/profile/videos`, `instagram/profile/reels`, `youtube/channel/videos`, `reddit/subreddit`, `linkedin/profile/posts`, `twitter/tweet/retweeters`, `youtube/channel`, `instagram/profile`), with your key. No other service.
 
 ## Code
 
