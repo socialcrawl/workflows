@@ -41,7 +41,7 @@ The run prints the path of its folder. Read `report.md` there and answer in a fe
 2. The top break-outs with their platform, multiple and what they were compared with, from "The break-outs".
 3. Any flag in the Note column (still rising, young posts in its base, unusual engagement), said as the report says it.
 4. What will not copy and the next steps, as the report gives them.
-5. What the run could not read (from "What we could not verify") and the cost.
+5. What the run could not read (from "What we could not verify"), giving each reason as the report writes it: "TikTok's share of this run was used up" is not "the budget ran out". Then the cost.
 
 Point the person to `report.html` for the chart and `data/` for every post read: `posts.csv` (each candidate with its multiple), `search_posts.csv` and `baseline_posts.csv`. Never add a number that is not in the report. Accounts under 10,000 followers are described in the report, not named: keep it that way in your answer.
 
