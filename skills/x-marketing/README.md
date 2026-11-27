@@ -39,11 +39,11 @@ The example names only accounts with 10,000 followers or more; your own run keep
 | Run | Reads | Credits |
 | --- | --- | --- |
 | Default | two pages of top posts and one of the latest, the earlier posts of up to 12 authors, retweeters and quotes on the top break-outs, replies on three | 36 measured, quoted at about 35, at most 55 |
-| `--deep` | four pages of top posts and two of the latest, more candidates for the same 12 authors, retweeters on six posts, quotes on six, replies on eight | 58 measured, quoted at about 88, at most 128 |
+| `--deep` | four pages of top posts and two of the latest, the earlier posts of up to 30 authors, retweeters on six posts, quotes on six, replies on eight | 101 measured, quoted at about 99, at most 143 |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 36 credits, 22 calls, 79 s (req-Er9DJhuIdcfxnl2R to req-q5ZKbKM7Oxy5DWVG); `--deep` 58 credits, 35 calls, 183 s (req-RlPGc72Ex9sFOgUd to req-XfRJUtQJHuVHpOxb).
+Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 36 credits, 22 calls, 79 s (req-Er9DJhuIdcfxnl2R to req-q5ZKbKM7Oxy5DWVG); `--deep` 101 credits, 55 calls, 226 s, 30 authors read (req-8XlFF3oLdEwgfJoc to req-j2JreMA5EgXC6NpF).
 
 ## How it counts
 
@@ -56,7 +56,7 @@ A post is marked likely boosted (inferred) only when two things hold together: u
 - Every quote: the quote search finds about two thirds of a post's quotes.
 - Every retweeter: one page is read per post, two on `--deep`.
 - Posts under 1,000 views: they are counted, not measured.
-- More than 12 authors: the run reads the earlier posts of the 12 whose posts drew the most views per follower, on either kind of run, and the report counts the posts it could not measure.
+- More than 12 authors on a default run, or 30 on `--deep`: the run reads the earlier posts of the authors whose posts drew the most views per follower, and the report counts the posts it could not measure.
 
 ## What it calls
 

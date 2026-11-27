@@ -31,7 +31,7 @@ Use the words people write in posts: a topic ("vector databases"), a product cat
 npx -y socialcrawl@latest x-marketing "<keyword>"
 ```
 
-The CLI prints the price (about 35 credits, at most 55) and runs. Add `--deep` when the person wants more pages, retweeters and quotes on more posts, and more replies (about 88 credits, at most 128). If their balance is short, the run reads what it covers and says what it left out.
+The CLI prints the price (about 35 credits, at most 55) and runs. Add `--deep` when the person wants more pages, retweeters and quotes on more posts, and more replies, and it measures up to 30 authors instead of 12 (about 99 credits, at most 143). If their balance is short, the run reads what it covers and says what it left out.
 
 By default it reads the last 30 days. If the person names a period, pass `--since YYYY-MM-DD` and `--until YYYY-MM-DD`; for all time, `--since 2000-01-01`. The line under the report's title states the window (for example `X · 29/10/2026 to 27/11/2026`): say it in your answer.
 

@@ -69,7 +69,7 @@ No break-out here rests on a large audience or a flagged engagement pattern [F1]
 
 | Play | Command | What to check |
 |---|---|---|
-| Read deeper: more pages of posts, retweeters and quotes on more posts, more replies | `npx -y socialcrawl@latest x-marketing "AI coding tools" --deep` | free quote first: about 88 credits, at most 128 |
+| Read deeper: more pages of posts, up to 30 authors, retweeters and quotes on more posts, more replies | `npx -y socialcrawl@latest x-marketing "AI coding tools" --deep` | free quote first: about 99 credits, at most 143 |
 | Track the top break-out (@pvergadia) | `npx -y socialcrawl@latest post-tracker https://x.com/pvergadia/status/2125849856334090279` | its views in 14 days against 18,395 today |
 | Read how its author grows | `npx -y socialcrawl@latest social-teardown @pvergadia` | the posts that carried the account |
 
@@ -104,7 +104,7 @@ No break-out here rests on a large audience or a flagged engagement pattern [F1]
 - Whether a post was paid for: X publishes no ad flag here; a post is only marked likely boosted (inferred), on two numbers together
 - 13 posts under 1,000 views: under the floor, so not measured
 - 1 post whose author's earlier originals had a median under 100 views: too small a base for a multiple
-- 12 candidates with no baseline: past the 12 authors whose posts drew the most views per follower, the most a run reads
+- 12 candidates with no baseline: past the 12 authors whose posts drew the most views per follower, the most a default run reads (check by hand: socialcrawl x-marketing "AI coding tools" --deep)
 - [F7] the quote search finds about two thirds of a post's quotes
 - [F8] counts, not a pattern: a pattern needs 24 settled posts on one account
 
@@ -112,6 +112,7 @@ No break-out here rests on a large audience or a flagged engagement pattern [F1]
 
 - A break-out is a post at 3 times or more the median views of its author's 8 to 20 originals published before it, read with one search that ends at the post's minute; under 8 such posts, or a median under 100 views, no multiple is given.
 - A post is marked likely boosted (inferred) only when both hold: under 1.5 likes per 1,000 views, and more than 12% of the retweeters read above 10,000 followers. It is then never called a break-out. With few likes per view alone it is marked unusual engagement (inferred) and kept.
+- This default run read the earlier posts of at most 12 authors (--deep reads up to 30), those whose posts drew the most views per follower; the other candidates are counted under what could not be verified.
 - Accounts under 10,000 followers are described, not named or linked; data/posts.csv keeps every row.
 - Findings are labelled seen, seen, but self-reported, inferred, unknown; a count that could not be read is shown as unknown (unknown, not zero).
 
