@@ -52,6 +52,7 @@ In Claude Code you can also add this repository as a plugin marketplace: `/plugi
 | [`tiktok-marketing`](skills/tiktok-marketing/) | a keyword | the TikTok videos breaking out on it against their creators' earlier videos, with their lengths, hooks, sounds and what the comments ask |
 | [`instagram-marketing`](skills/instagram-marketing/) | a keyword | the Instagram reels breaking out on it against their creators' earlier reels, with their lengths, hooks and what the comments ask |
 | [`youtube-marketing`](skills/youtube-marketing/) | a keyword | the YouTube videos and Shorts breaking out on it against their channels' earlier uploads, with their lengths, titles and what the comments ask |
+| [`linkedin-marketing`](skills/linkedin-marketing/) | a keyword | the LinkedIn posts breaking out on it against their authors' earlier posts on likes, the companies and members posting most, and what the comments ask |
 | [`competitor-research`](skills/competitor-research/) | two to five brands | each brand's share of the posts read per platform, its best post against its author's usual reach, and what its audience asks and complains about |
 | [`post-tracker`](skills/post-tracker/) | a post link | its views, likes, comments and quotes now and at every later reading, against its author's usual reach, with a chart |
 

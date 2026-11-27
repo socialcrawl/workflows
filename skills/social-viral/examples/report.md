@@ -7,7 +7,7 @@
 1. 11 posts broke out at 3x their author's usual reach, on 5 platforms [F1]
 2. X: an account with 2,447 followers at 48.1x its author's median views over 20 earlier posts [F2]
 3. Instagram: @benkimball.ai at 33.4x its author's median likes over 18 earlier posts [F3]
-4. Reddit: a post in r/ClaudeUniversity at 22.5x its author's median score over 17 earlier posts [F4]
+4. Reddit: a post in r/ClaudeUniversity at 22.5x its community's median score over 17 earlier posts [F4]
 5. YouTube: @IBMTechnology at 18.6x its author's median views over 20 earlier posts [F5]
 
 ## The break-outs
