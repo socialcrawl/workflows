@@ -35,7 +35,7 @@ If two fit, ask one short question. If none fits, say so and suggest the closest
 npx -y socialcrawl@latest <workflow> "<input>"
 ```
 
-The CLI prints the free quote first. A default run stays inside the person's budget and runs without asking; a `--deep` run asks first. Pass `--yes` only when the person has already agreed to the quoted cost.
+The CLI prints the price, then runs without asking: a default run, or a `--deep` run when the person wants the full read. If their balance cannot cover the whole run, it reads what the balance covers, says what it left out, and ends with a top-up link. Use `--plan` only when the person asks what a run would cost without running it.
 
 ## 4. Answer from the report
 

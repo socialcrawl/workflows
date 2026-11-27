@@ -61,7 +61,7 @@ Or in a terminal:
 npx -y socialcrawl@latest social-viral "AI coding tools"
 ```
 
-Every run shows its price before it spends anything. A default run fits inside the free credits.
+Every run prints its price, then runs with no approval step. A default run fits inside the free credits; when your balance runs short, the run reads what it covers, says what it left out, and links to a top-up.
 
 ## Contributing
 
