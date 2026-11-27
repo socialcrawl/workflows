@@ -41,11 +41,11 @@ The example names only channels with 10,000 subscribers or more and links no one
 | Run | Reads | Credits |
 | --- | --- | --- |
 | Default | two searches (videos of the last 30 days, and Shorts cut to it), one batch lookup of likes and durations, one of subscribers, 10 channel shelves, 3 comment sections, 2 transcripts | 34 measured, quoted at about 33, at most 49 |
-| `--deep` | two searches of 3 pages, 25 channel shelves of 2 pages, 8 comment sections of 2 pages, 5 transcripts | quoted at about 113, at most 141; not yet measured |
+| `--deep` | two searches of 3 pages, 25 channel shelves of 2 pages, 8 comment sections of 2 pages, 5 transcripts | 105 measured, quoted at about 113, at most 141 |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 34 credits, 19 calls, 86 s (req-VA3PVDlVrWddMDBp to req-xU1GxEmPsxq9w7Z7).
+Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 34 credits, 19 calls, 86 s (req-VA3PVDlVrWddMDBp to req-xU1GxEmPsxq9w7Z7); `--deep` 105 credits, 42 calls, 381 s (req-sYQSmU0UEwUEcC0o to req-SVEBmJQxhL0iYCge), most of the time spent reading channel shelves.
 
 ## How it measures a video
 

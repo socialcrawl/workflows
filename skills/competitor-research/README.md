@@ -38,11 +38,11 @@ The example names only accounts with 10,000 followers or more and never a Reddit
 | Run | Reads | Credits, three brands |
 | --- | --- | --- |
 | Default | one search per brand on X, TikTok, YouTube and Reddit, each brand's best post per platform measured, comments on those posts | 48 measured, quoted at about 56, at most 98 |
-| `--deep` | two pages per search, Instagram too, Reddit comment threads, each brand's TikTok ads | quoted at about 112, at most 239; not yet measured |
+| `--deep` | two pages per search, Instagram too, Reddit comment threads, each brand's TikTok ads | 119 measured, quoted at about 112, at most 239 |
 
 More brands cost more: each adds about a third. The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "Supabase, Firebase, Neon", 29/10 to 27/11/2026, uncached: default 48 credits, 30 calls, 104 s (req-FikgDh8syGfwFqF5 to req-MS1zwV4aPlrteEo2).
+Measured 27/11/2026 on "Supabase, Firebase, Neon", 29/10 to 27/11/2026, uncached: default 48 credits, 30 calls, 104 s (req-FikgDh8syGfwFqF5 to req-MS1zwV4aPlrteEo2); `--deep` 119 credits, 46 calls, 251 s (req-j4dCNhPnEeDLfFn3 to req-oHWwNSdFYJqoH0yt).
 
 ## How it counts
 

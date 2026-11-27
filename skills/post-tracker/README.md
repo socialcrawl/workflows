@@ -38,6 +38,8 @@ The full report is in [examples/report.md](examples/report.md). In short: the vi
 | Every later run | the post | 1 |
 | `--every <minutes> --times <n>` | the post n times | about n |
 
+There is no deeper read of one post: `--deep` reads the same calls as a default run and only raises the budget. For more readings, use `--times`.
+
 The run prints its price, then runs. If your balance is short, it takes the readings the balance covers and says how many it left out.
 
 Measured 27/11/2026, uncached: the IBM Technology video, 3 credits for two readings with the baseline (req-3XEl0ykdcIxJuJco, req-othyuLkC6FENfQkZ), then 2 with the one-time size read (req-2HyzteDQ65Uio4Yb), then 1 a run (req-tDTAzekAaaABKEoi, req-zYTM7hlAMx44jdgP); an r/linux thread, 2 credits for a reading and its community's baseline.

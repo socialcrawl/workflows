@@ -32,7 +32,7 @@ It reads the last 30 days unless you say otherwise: `--since 2026-11-01 --until 
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short, over 29/10 to 27/11/2026: all 5 videos measured broke out at 3 times or more their creator's usual views, out of 35 found above 1,000 views. The largest came from a creator with 332 followers: 37,492 views against a median of 43.5 over the 20 videos posted before it. The next, from @jameseer33, had 1,129,564 views against a median of 2,270, but its 11 earlier videos were posted three weeks before it, so the report prints each baseline's dates beside its multiple. Three of the five ran 30 to 60 seconds. The 125 comments read held 18 questions and 3 complaints. A run folder also holds `report.html` with charts, `data/` with every video and comment as CSV, and `responses.jsonl` with every API response.
+The full report is in [examples/report.md](examples/report.md). In short, over 29/10 to 27/11/2026: all 6 videos measured broke out at 3 times or more their creator's usual views, out of 35 found above 1,000 views. The largest, from @jameseer33, had 1,130,139 views against a median of 2,270 over its 11 earlier videos, which were posted three weeks before it, so the report prints each baseline's dates beside its multiple. Three of the six ran 30 to 60 seconds. The 149 comments read held 47 questions and 6 complaints. A run folder also holds `report.html` with charts, `data/` with every video and comment as CSV, and `responses.jsonl` with every API response.
 
 The example names only accounts with 10,000 followers or more and links no one else's videos; your own run keeps every link in `data/posts.csv`.
 
@@ -40,12 +40,12 @@ The example names only accounts with 10,000 followers or more and links no one e
 
 | Run | Reads | Credits |
 | --- | --- | --- |
-| Default | two searches of the last 30 days (top and most liked), 8 creators measured, 3 comment sections, 1 transcript | 37 measured, quoted at about 41, at most 55 |
-| `--deep` | three searches of 3 pages, 15 creators, 8 comment sections of 2 pages, 3 transcripts | quoted at about 124, at most 176; not yet measured |
+| Default | two searches of the last 30 days (top and most liked), 8 creators measured, 3 comment sections, 1 transcript | 38 measured, quoted at about 41, at most 55 |
+| `--deep` | three searches of 3 pages, 15 creators, 8 comment sections of 2 pages, 3 transcripts | 109 measured, quoted at about 124, at most 176 |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 37 credits, 15 calls, 60 s (req-sqxZUmfac0OhHNEm to req-TeOZSZRM8iIgDUAD).
+Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 38 credits, 15 calls, 55 s (req-XUaco9O4zmXOHi0G to req-siue0xM3hIyvOUJb); `--deep` 109 credits, 29 calls, 193 s (req-5JifQsq2tMOWNEIh to req-v52mo0yLhtJYM2Az).
 
 ## How it measures a video
 

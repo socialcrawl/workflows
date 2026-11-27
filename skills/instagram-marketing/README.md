@@ -41,11 +41,11 @@ The example names only accounts with 10,000 followers or more and links no one e
 | Run | Reads | Credits |
 | --- | --- | --- |
 | Default | 2 search pages cut to the last 30 days, follower counts for the 6 most viewed creators and up to 5 break-outs' creators, 6 creators measured, 1 comment section, 1 transcript | 39 measured, quoted at about 42, at most 60 |
-| `--deep` | 2 undated and 2 dated search pages (with view counts), 30 follower counts, 15 creators, 6 comment sections of 2 pages, 3 transcripts | quoted at about 183, at most 240; not yet measured |
+| `--deep` | 2 undated and 2 dated search pages (with view counts), 30 follower counts, 15 creators, 6 comment sections of 2 pages, 3 transcripts | 167 measured, quoted at about 183, at most 240 |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 39 credits, 18 calls, 104 s (req-4jVKL3bqC4PPQ8YR to req-kyccET91LcJxiuqK).
+Measured 27/11/2026 on "AI coding tools", 29/10 to 27/11/2026, uncached: default 39 credits, 18 calls, 104 s (req-4jVKL3bqC4PPQ8YR to req-kyccET91LcJxiuqK); `--deep` 167 credits, 44 calls, 302 s (req-2X4l8NL9RPw838cQ to req-qAkBWhPSvURJXiZo), 29 of them on the dated search that fills view counts.
 
 ## How it measures a reel
 
