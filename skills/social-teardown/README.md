@@ -32,7 +32,7 @@ Name an account as `@handle` (X), `tiktok:name`, `ig:name`, `yt:@name`, `threads
 
 ![The card of the example run](examples/card.svg)
 
-The full report is in [examples/report.md](examples/report.md). In short: the run read 729 posts, 101 of them Notion's own. 10 of the 101 broke out, three times or more their earlier posts' median, and together they carry 47% of the views; the largest did 46.6 times its usual views. The 23 videos carry 49% of the views, and posts that link out are more common in the top third than in the bottom third (38% against 21%).
+The full report is in [examples/report.md](examples/report.md). In short: the run read 729 posts. 60 are Notion's own posts and 36 more quote another post. 5 of the 60 broke out, three times or more their earlier posts' median, and together they carry 48% of the views; the largest did 34.7 times its usual views. The 20 videos carry 52% of the views, and posts with no link are more common in the top third than in the bottom third (62% against 15%).
 
 The same brand on TikTok, Instagram and YouTube in one run is in [examples/brand/report.md](examples/brand/report.md). It also shows the flag for a post whose views run far ahead of its likes, as promoted posts do: one YouTube video had 0.01 likes per 1,000 views against the channel's median of 8.85.
 
@@ -42,12 +42,12 @@ A run folder also holds `report.html` with charts, `data/` with every post read 
 
 | Run | Reads | Credits | Time |
 | --- | --- | --- | --- |
-| Default | the recent history: the newest posts and month by month back until its share runs out; on X the reposters, replies, first-hour quotes and launch posts around the top posts | 77 measured on one account, quoted at about 83, at most 100, shared by all the accounts named | about 4 minutes |
+| Default | the recent history: the newest posts and month by month back until its share runs out; on X the reposters, replies, first-hour quotes and launch posts around the top posts | 74 measured on one account, quoted at about 83, at most 100, shared by all the accounts named | about 4 to 5 minutes |
 | `--deep` | the whole history from the join date, more top posts, more pages of each, Reddit and Hacker News echo of the top launches | 438 measured, quoted at about 493, at most 600 | about 20 minutes |
 
 The run prints its price, then runs. If your balance is short, it reads what the balance covers and says what it left out.
 
-Measured 27/11/2026, uncached: `@notionhq` default 77 credits, 42 calls, 231 s (req-STylUBRjCCtxETyh to req-Vuu56SS132K4MCYm); `tiktok:notionhq ig:notionhq yt:@Notion` default 66 credits, 19 calls, 191 s (req-YpUkFjUipLQWApCB to req-aDNOHTJDw23cJ3bS); `@notionhq --deep` 438 credits, 96 calls, 19 minutes, 590 posts read (req-ZesaDMwPTaIwXrpb to req-BaNrEJpNS5Z7foJP).
+Measured 27/11/2026, uncached: `@notionhq` default 74 credits, 38 calls, 300 s (req-NbKSskkO5zqHQDI1 to req-uWTVl6xNkpo4dlRR); `tiktok:notionhq ig:notionhq yt:@Notion` default 66 credits, 19 calls, 191 s (req-YpUkFjUipLQWApCB to req-aDNOHTJDw23cJ3bS); `@notionhq --deep` 438 credits, 96 calls, 19 minutes, 590 posts read (req-ZesaDMwPTaIwXrpb to req-BaNrEJpNS5Z7foJP).
 
 ## How it measures a post
 
@@ -57,12 +57,12 @@ Every sentence in the report says whether it was seen, inferred or unknown, and 
 
 ## What it cannot read
 
-- What an X post quotes: the API returns no quoted post on X rows yet, so text-only posts that may be quotes are counted and flagged.
+- Whom an X post quotes, on rows the API returned before it added the quoted post (27/11/2026): such text posts are counted as possible quotes.
 - Quotes after a post's first hour (three hours with `--deep`), and posts about a launch after its first hour (two with `--deep`). X search reads newest first, so a read can stop before the start of its window; the report says where each read stopped.
 - Follower growth over time: platforms give today's count only.
 - Who shared a post on TikTok, Instagram, YouTube or LinkedIn: those platforms do not show it.
 - Adverts: a promoted post's views count as views. The report flags views far ahead of likes, and says that is inferred.
-- Transcripts of music-only videos can come back with words nobody spoke. The report says so beside every transcript.
+- Transcripts of music-only videos on TikTok, Instagram and YouTube can come back with words nobody spoke. The report says so beside each of those transcripts.
 
 ## Credit
 
