@@ -12,6 +12,17 @@ jobs:
         with:
           node-version: 22
       - run: node --test scripts/check.test.mjs
-      - run: node scripts/check.mjs
+      - run: node scripts/check.mjs --against socialcrawl/skills socialcrawl/mcp
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Plugin manifests parse
         run: for f in .claude-plugin/*.json .cursor-plugin/*.json .codex-plugin/*.json; do node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || exit 1; done
+      - name: The skills installer finds every skill
+        env:
+          DISABLE_TELEMETRY: "1"
+        run: |
+          out=$(npx -y skills add . --list 2>&1)
+          echo "$out"
+          if echo "$out" | grep -q "SKIPPED"; then echo "The installer skipped a skill."; exit 1; fi
+          n=$(ls -d skills/*/ | wc -l)
+          echo "$out" | grep -q "Found $n skills" || { echo "The installer did not find all $n skills."; exit 1; }

@@ -8,18 +8,30 @@ import { fileURLToPath } from "node:url";
 const MAX_DESCRIPTION = 1024;
 // Skill names other SocialCrawl repositories install into the same folders.
 const RESERVED = new Set(["socialcrawl"]);
+const PREFIX = "socialcrawl-";
 
-/** The YAML frontmatter's top-level keys and metadata.version, read without a YAML library. */
+/** A one-line YAML scalar without its quotes ('' inside single quotes is one '). */
+function scalar(raw) {
+  if (/^'.*'$/.test(raw)) return raw.slice(1, -1).replace(/''/g, "'");
+  if (/^".*"$/.test(raw)) return raw.slice(1, -1).replace(/\\"/g, '"');
+  return raw;
+}
+
+/**
+ * The YAML frontmatter's top-level keys and metadata.version, read without a YAML library.
+ * `unquoted` lists the keys whose plain value holds ": ", which YAML refuses to parse.
+ */
 function frontmatter(text) {
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!m) return null;
-  const out = {};
+  const out = { unquoted: [] };
   let inMeta = false;
   for (const line of m[1].split(/\r?\n/)) {
     const top = line.match(/^([a-zA-Z_-]+):\s*(.*)$/);
     if (top) {
       inMeta = top[1] === "metadata";
-      out[top[1]] = top[2].replace(/^["']|["']$/g, "");
+      out[top[1]] = scalar(top[2]);
+      if (!/^["']/.test(top[2]) && top[2].includes(": ")) out.unquoted.push(top[1]);
       continue;
     }
     const nested = line.match(/^\s+version:\s*(.*)$/);
@@ -38,8 +50,17 @@ function markdownFiles(dir, base = dir, out = []) {
   return out;
 }
 
-/** Every problem in the repository at dir, as one line each; empty when it is well formed. */
-export function checkRepo(dir) {
+/** The skill names in a repository tree (paths ending in <name>/SKILL.md), sorted, once each. */
+export function skillNames(paths) {
+  const names = paths.map((p) => p.match(/(?:^|\/)([^/]+)\/SKILL\.md$/)?.[1]).filter(Boolean);
+  return [...new Set(names)].sort();
+}
+
+/**
+ * Every problem in the repository at dir, as one line each; empty when it is well formed.
+ * `taken` maps another repository (owner/name) to the skill names it installs.
+ */
+export function checkRepo(dir, { taken = {} } = {}) {
   const problems = [];
   const skillsDir = path.join(dir, "skills");
   const rootReadme = existsSync(path.join(dir, "README.md")) ? readFileSync(path.join(dir, "README.md"), "utf8") : "";
@@ -56,8 +77,11 @@ export function checkRepo(dir) {
       continue;
     }
     if (fm.name !== name) problems.push(`${name}: name "${fm.name}" does not match its folder "${name}"`);
-    // `socialcrawl init` replaces a skill folder of the same name, so this name would delete it.
+    // Installers replace a skill folder of the same name, so a shared name deletes the other skill.
+    if (!name.startsWith(PREFIX)) problems.push(`${name}: the name must start with "${PREFIX}"`);
     if (RESERVED.has(name)) problems.push(`${name}: the name is taken by the API skill in socialcrawl/skills`);
+    for (const [other, names] of Object.entries(taken)) if (names.includes(name)) problems.push(`${name}: the name is taken by a skill in ${other}`);
+    for (const key of fm.unquoted) problems.push(`${name}: ${key} has ": " in it, so it must be quoted`);
     if (!fm.description) problems.push(`${name}: no description`);
     else if (fm.description.length > MAX_DESCRIPTION) problems.push(`${name}: description is ${fm.description.length} characters, over ${MAX_DESCRIPTION}`);
     if (!fm.version) problems.push(`${name}: no metadata.version`);
@@ -68,9 +92,23 @@ export function checkRepo(dir) {
   return problems;
 }
 
+/** The skill names in a public GitHub repository's default branch. */
+async function githubSkillNames(repo) {
+  const headers = { Accept: "application/vnd.github+json", ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) };
+  const res = await fetch(`https://api.github.com/repos/${repo}/git/trees/HEAD?recursive=1`, { headers });
+  if (!res.ok) throw new Error(`GitHub answered ${res.status} for ${repo}`);
+  const body = await res.json();
+  return skillNames(body.tree.map((t) => t.path));
+}
+
+//   node scripts/check.mjs --against socialcrawl/skills socialcrawl/mcp
+// also fails on a skill name those repositories already install.
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const dir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-  const problems = checkRepo(dir);
+  const at = process.argv.indexOf("--against");
+  const taken = {};
+  if (at > 0) for (const repo of process.argv.slice(at + 1)) taken[repo] = await githubSkillNames(repo);
+  const problems = checkRepo(dir, { taken });
   for (const p of problems) console.error(p);
   if (problems.length) process.exit(1);
   console.log("All skills are well formed and listed.");

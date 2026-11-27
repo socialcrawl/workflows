@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { describe, it } from "node:test";
 
-import { checkRepo } from "./check.mjs";
+import { checkRepo, skillNames } from "./check.mjs";
 
 const skill = (name, extra = "") => `---\nname: ${name}\ndescription: Find what broke out this week on six platforms. Use when someone asks what went viral.\nmetadata:\n  version: "0.1.0"\n${extra}---\n\n# ${name}\n`;
 
@@ -22,13 +22,13 @@ const readme = (...names) => `# workflows\n\n| Workflow | Does |\n| --- | --- |\
 
 describe("checkRepo", () => {
   it("passes a well-formed repository", () => {
-    const dir = repo({ "README.md": readme("social-viral"), "skills/social-viral/SKILL.md": skill("social-viral"), "skills/social-viral/README.md": "# social-viral\n" });
+    const dir = repo({ "README.md": readme("socialcrawl-viral"), "skills/socialcrawl-viral/SKILL.md": skill("socialcrawl-viral"), "skills/socialcrawl-viral/README.md": "# social-viral\n" });
     assert.deepEqual(checkRepo(dir), []);
   });
 
   it("requires the frontmatter name to match the folder", () => {
-    const dir = repo({ "README.md": readme("social-viral"), "skills/social-viral/SKILL.md": skill("viral"), "skills/social-viral/README.md": "x" });
-    assert.match(checkRepo(dir).join("\n"), /name "viral" does not match its folder "social-viral"/);
+    const dir = repo({ "README.md": readme("socialcrawl-viral"), "skills/socialcrawl-viral/SKILL.md": skill("viral"), "skills/socialcrawl-viral/README.md": "x" });
+    assert.match(checkRepo(dir).join("\n"), /name "viral" does not match its folder "socialcrawl-viral"/);
   });
 
   it("requires a description and a version", () => {
@@ -55,9 +55,38 @@ describe("checkRepo", () => {
     assert.match(checkRepo(dir).join("\n"), /socialcrawl: the name is taken by the API skill in socialcrawl\/skills/);
   });
 
+  it("requires every skill name to start with socialcrawl-, so it cannot collide with someone else's skill", () => {
+    const dir = repo({ "README.md": readme("viral-posts"), "skills/viral-posts/SKILL.md": skill("viral-posts"), "skills/viral-posts/README.md": "x" });
+    assert.match(checkRepo(dir).join("\n"), /viral-posts: the name must start with "socialcrawl-"/);
+  });
+
+  it("rejects a name another SocialCrawl repository already installs", () => {
+    const dir = repo({ "README.md": readme("socialcrawl-viral"), "skills/socialcrawl-viral/SKILL.md": skill("socialcrawl-viral"), "skills/socialcrawl-viral/README.md": "x" });
+    assert.deepEqual(checkRepo(dir, { taken: { "socialcrawl/skills": ["socialcrawl", "socialcrawl-viral"] } }), ["socialcrawl-viral: the name is taken by a skill in socialcrawl/skills"]);
+  });
+
+  it("rejects an unquoted description with ': ' in it, which YAML cannot parse and installers skip", () => {
+    const bad = `---\nname: socialcrawl-a\ndescription: Track one post: views and likes.\nmetadata:\n  version: "0.1.0"\n---\n`;
+    const dir = repo({ "README.md": readme("socialcrawl-a"), "skills/socialcrawl-a/SKILL.md": bad, "skills/socialcrawl-a/README.md": "x" });
+    assert.match(checkRepo(dir).join("\n"), /socialcrawl-a: description has ": " in it, so it must be quoted/);
+  });
+
+  it("accepts a quoted description with ': ' in it, and reads it without the quotes", () => {
+    const good = `---\nname: socialcrawl-a\ndescription: 'Track one post: its views, and the author''s usual reach.'\nmetadata:\n  version: "0.1.0"\n---\n`;
+    const dir = repo({ "README.md": readme("socialcrawl-a"), "skills/socialcrawl-a/SKILL.md": good, "skills/socialcrawl-a/README.md": "x" });
+    assert.deepEqual(checkRepo(dir), []);
+  });
+
   it("rejects a description over 1,024 characters", () => {
     const long = "x".repeat(1100);
     const dir = repo({ "README.md": readme("a-b"), "skills/a-b/SKILL.md": `---\nname: a-b\ndescription: ${long}\nmetadata:\n  version: "0.1.0"\n---\n`, "skills/a-b/README.md": "x" });
     assert.match(checkRepo(dir).join("\n"), /a-b: description is 1100 characters/);
+  });
+});
+
+describe("skillNames", () => {
+  it("reads the skill names in a repository tree, once each", () => {
+    const tree = ["README.md", "socialcrawl/SKILL.md", "skills/socialcrawl/SKILL.md", ".agents/skills/socialcrawl/SKILL.md", "skills/socialcrawl/references/a.md", "skills/other/SKILL.md"];
+    assert.deepEqual(skillNames(tree), ["other", "socialcrawl"]);
   });
 });
